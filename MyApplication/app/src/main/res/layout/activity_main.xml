@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:gravity="center"
+        android:textSize="25dp"
+        android:layout_marginTop="100sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="ỨNG DỤNG GIỚI THIỆU GIA SƯ"/>
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:layout_marginHorizontal="50sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Nhập tài khoản"/>
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:gravity="center"
+        android:layout_marginHorizontal="50sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Nhập mật khẩu"/>
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="100sp"
+        android:id="@+id/btn_login"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập" />
+
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btn_signup"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:text="Đăng kí" />
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Thoát" />
+
+
+</LinearLayout>

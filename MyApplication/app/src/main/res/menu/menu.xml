@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Trang chủ" />
+    <item android:icon="@drawable/ic_baseline_book_24"
+        android:id="@+id/menu_list"
+        android:title="Lịch học" />
+    <item android:id="@+id/menu_list2"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:title="Kế hoạch" />
+    <item android:id="@+id/menu_personal"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Tài khoản" />
+
+</menu>
