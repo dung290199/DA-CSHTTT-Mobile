@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity6 extends AppCompatActivity {
-    // trang thông tin giới thiệu app
+    // Trang thông tin giới thiệu app
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -7,6 +7,16 @@
     android:orientation="vertical"
     tools:context=".MainActivity2">
 
+    <TextView
+        android:gravity="center"
+        android:textSize="25dp"
+        android:layout_marginTop="100sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="CHÀO MỪNG BẠN ĐẾN VỚI ỨNG DỤNG GIA SƯ"/>
+
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,8 +25,7 @@
         app:menu="@menu/menu"
         android:layout_alignParentBottom="true"
         tools:ignore="MissingConstraints"
-        app:itemTextColor="@color/color"
-        app:itemIconTint="@color/color"
+
         >
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
