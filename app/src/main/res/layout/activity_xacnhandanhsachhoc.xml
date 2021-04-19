@@ -3,85 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:scaleType="fitXY"
-            android:layout_margin="10dp"
-            android:src="@drawable/giasu"/>
-
-    </LinearLayout>
+<!--    private String username ;-->
+<!--    private String password;-->
+<!--    private String email ;-->
+<!--    private  String role;-->
+<!--    private String fullname;-->
+<!--    private Date birthday;-->
+<!--    private String phone;-->
+<!--    private String address;-->
+<!--    private Boolean gender;-->
+<!--    private String picture;-->
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_marginLeft="260dp">
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-
-
-            android:text="Đăng xuất" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-
-        >
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:text="Danh sách gia sư"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textStyle="normal" />
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Danh sách học sinh"
-            android:textStyle="normal"
-            android:textAlignment="center"
-            android:textAllCaps = "false"/>
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Xét duyệt danh sách"
-            android:textStyle="normal"
-            android:textAlignment="center"
-            android:textAllCaps = "false"/>
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Danh sách đen"
-            android:textStyle="normal"
-            android:textAlignment="center"
-            android:textAllCaps = "false"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+        android:layout_marginTop="100sp"
+        android:gravity="center"
         android:layout_width="385dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Đăng kí thông tin"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -98,7 +39,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 />
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -127,7 +68,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Bằng cấp"
+                android:text="Số điện thoại"
                 android:textColor="#0C0202"
                 android:textStyle="bold" />
 
@@ -164,7 +105,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Số điện thoại"
+                android:text="Giới tính"
                 android:textColor="#0C0202"
                 android:textStyle="bold" />
 
@@ -192,70 +133,34 @@
                 android:layout_weight="1" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Môn dạy"
-                android:textColor="#0C0202"
-                android:textStyle="bold" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Thời gian dạy"
-                android:textColor="#0C0202"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-         />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="OTP"
-                android:textColor="#0C0202"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:gravity="center">
 
             <Button
                 android:layout_width="167dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Đăng kí">
+                android:background="@drawable/botron3"
+                android:id="@+id/btn_xacnhan"
+                android:text="Xác nhận">
+
+            </Button>
+            <Button
+                android:layout_width="167dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/botron3"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/btn_quaylai"
+                android:text="Quay lại">
 
             </Button>
         </LinearLayout>

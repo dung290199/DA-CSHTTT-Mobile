@@ -45,11 +45,11 @@ public class CustomAdapterStudent extends ArrayAdapter<Teacher> {
             viewholder= (Viewholder) convertView.getTag();
         }
         Teacher teacher = teacherList.get(position);
-        viewholder.tv_id.setText(String.valueOf(teacher.getId()));
-        viewholder.tv_ten.setText(teacher.getName());
-        viewholder.tv_n.setText(teacher.getNganh());
+        viewholder.tv_id.setText(String.valueOf(teacher.getFullname()));
+        viewholder.tv_ten.setText(teacher.getUsername());
+        viewholder.tv_n.setText(teacher.getCv());
         viewholder.tv_email.setText(teacher.getEmail());
-        viewholder.tv_sdt.setText(teacher.getSdt());
+        viewholder.tv_sdt.setText(teacher.getPhone());
 
         return convertView;
     }

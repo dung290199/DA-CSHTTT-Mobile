@@ -13,12 +13,12 @@ public class TrangchinhActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trangchinh);
-        loginEvent();
+        setContentView(R.layout.activity_dangki);
+
     }
 
     private void loginEvent() {
-        btnDangki=findViewById(R.id.btn_dangki);
+//        btnDangki=findViewById(R.id.btn_dangki);
         btnDangki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

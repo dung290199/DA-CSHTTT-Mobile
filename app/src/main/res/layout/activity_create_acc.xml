@@ -20,7 +20,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/botron"
+        android:background="@drawable/nentrang"
         android:hint="UserName"
         android:gravity="center"
         android:layout_margin="15dp"
@@ -29,7 +29,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/botron"
+        android:background="@drawable/nentrang"
         android:gravity="center"
         android:password="true"
         android:layout_margin="15dp"
@@ -39,7 +39,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/botron"
+        android:background="@drawable/nentrang"
         android:hint="AgainPassword"
         android:layout_margin="15dp"
         android:password="true"

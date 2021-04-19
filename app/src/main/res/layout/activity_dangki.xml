@@ -5,14 +5,16 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
-        <TextView
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="TRUNG TÂM GIA SƯ ĐÀ NẴNG"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:background="@color/colorAccent"/>
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:layout_margin="10dp"
+            android:src="@drawable/giasu"/>
 
     </LinearLayout>
 
@@ -167,7 +169,8 @@
                 android:layout_height="wrap_content"
                 android:text="Số điện thoại"
                 android:textStyle="bold"
-                android:textColor="#0C0202"/>
+                android:textColor="#0C0202"
+                android:id="@+id/tv_sdt"/>
             <EditText
                 android:layout_weight="1"
                 android:layout_width="wrap_content"

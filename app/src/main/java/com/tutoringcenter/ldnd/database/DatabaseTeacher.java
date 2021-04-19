@@ -45,9 +45,9 @@ public class DatabaseTeacher extends SQLiteOpenHelper {
     public void addsinhvien(Teacher teacher){
         SQLiteDatabase database= this.getWritableDatabase();
         ContentValues values= new ContentValues();
-        values.put(IDLOP, teacher.getNganh());
-        values.put(TEN, teacher.getName());
-        values.put(SDT, teacher.getSdt());
+//        values.put(IDLOP, teacher.getNganh());
+//        values.put(TEN, teacher.getName());
+//        values.put(SDT, teacher.getSdt());
         values.put(EMAIL, teacher.getEmail());
         database.insert(TABLE_NAME,null,values);
         database.close();
@@ -60,10 +60,10 @@ public class DatabaseTeacher extends SQLiteOpenHelper {
         if(cursor.moveToFirst()){
             do {
                 Teacher teacher = new Teacher();
-                teacher.setId(cursor.getInt(0));
-                teacher.setNganh(cursor.getString(1));
-                teacher.setName(cursor.getString(2));
-                teacher.setSdt(cursor.getString(3));
+//                teacher.setId(cursor.getInt(0));
+//                teacher.setNganh(cursor.getString(1));
+//                teacher.setName(cursor.getString(2));
+//                teacher.setSdt(cursor.getString(3));
                 teacher.setEmail(cursor.getString(4));
                 teacherList.add(teacher);
             }while(cursor.moveToNext());
@@ -75,11 +75,11 @@ public class DatabaseTeacher extends SQLiteOpenHelper {
     public int Update(Teacher teacher){
         SQLiteDatabase database= this.getWritableDatabase();
         ContentValues values= new ContentValues();
-        values.put(IDLOP, teacher.getNganh());
-        values.put(TEN, teacher.getName());
-        values.put(SDT, teacher.getSdt());
+//        values.put(IDLOP, teacher.getNganh());
+//        values.put(TEN, teacher.getName());
+//        values.put(SDT, teacher.getSdt());
         values.put(EMAIL, teacher.getEmail());
-        return database.update(TABLE_NAME,values,ID+"=?",new String[]{String.valueOf(teacher.getId())});
+        return database.update(TABLE_NAME,values,ID+"=?",new String[]{String.valueOf(teacher.getFullname())});
     }
     public int Delete(int id){
         SQLiteDatabase database =this.getWritableDatabase();

@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/botron"
+        android:background="@drawable/nentrang"
         android:enabled="false"
         android:gravity="center"
         android:hint="NHẬP THÔNG TIN"
@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/botron"
+        android:background="@drawable/nentrang"
         android:gravity="center"
         android:hint="ID Lớp"
         android:textSize="20sp" />
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/botron"
+        android:background="@drawable/nentrang"
         android:gravity="center"
         android:hint="Tên lớp"
 
