@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class TrangchinhActivity extends AppCompatActivity {
-    Button btnLogin;
+    Button btnDangki;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +18,8 @@ public class TrangchinhActivity extends AppCompatActivity {
     }
 
     private void loginEvent() {
-        btnLogin=findViewById(R.id.btn_login);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        btnDangki=findViewById(R.id.btn_dangki);
+        btnDangki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(TrangchinhActivity.this,LoginActivity.class);

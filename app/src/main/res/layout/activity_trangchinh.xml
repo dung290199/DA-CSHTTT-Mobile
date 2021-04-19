@@ -31,53 +31,40 @@
             android:text="Đăng nhập" />
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-
-        >
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Danh sách gia sư"
-            android:textStyle="normal"
-            android:textAlignment="center"
-            android:textAllCaps = "false"/>
-        <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Danh sách học sinh"
-        android:textStyle="normal"
-        android:textAlignment="center"
-        android:textAllCaps = "false"/>
-        <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Xét duyệt danh sách"
-        android:textStyle="normal"
-        android:textAlignment="center"
-        android:textAllCaps = "false"/>
-        <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Danh sách đen"
-        android:textStyle="normal"
-        android:textAlignment="center"
-        android:textAllCaps = "false"/>
-
-    </LinearLayout>
-<LinearLayout
+   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+       android:orientation="horizontal"
 >
-    <TextView
-        android:layout_marginLeft="10dp"
-        android:layout_width="200dp"
-        android:layout_height="match_parent"
-        android:text="lókjajksk"
-       />
+<!--    <ListView-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="lókjajksk"-->
+<!--        -->
+<!--       />-->
+       <LinearLayout
+           android:layout_width="194dp"
+           android:layout_height="163dp">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="loan">
+
+           </TextView>
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent">
+
+
+       </LinearLayout>
 
 </LinearLayout>
+
+
+
 
 </LinearLayout>

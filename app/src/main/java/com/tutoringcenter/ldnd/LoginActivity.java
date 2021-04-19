@@ -10,10 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
-    ImageView close,ok;
-    TextView tvten;
     EditText edtUserName,edtPhone;
-Button dangNhap;
+    Button dangNhap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
