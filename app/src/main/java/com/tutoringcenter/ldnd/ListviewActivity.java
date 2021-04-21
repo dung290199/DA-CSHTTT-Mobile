@@ -16,6 +16,7 @@ public class ListviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview);
 
+        List<View> a=getView();
 
         List<Country> image_details = getListData();
         final ListView listView = (ListView) findViewById(R.id.listView);
@@ -51,6 +52,10 @@ public class ListviewActivity extends AppCompatActivity {
         list.add(russia);
         list.add(loan);list.add(lee);list.add(anh);
         return list;
+    }
+    private  List<View> getView() {
+        List<View> list = new ArrayList<View>();
+        return null;
     }
 
 }

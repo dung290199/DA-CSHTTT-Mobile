@@ -13,19 +13,23 @@ public class TrangchinhActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dangki);
+        setContentView(R.layout.home);
 
     }
 
-    private void loginEvent() {
-//        btnDangki=findViewById(R.id.btn_dangki);
-        btnDangki.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(TrangchinhActivity.this,LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-
-    }
+//    private void home(){
+//
+//    }
+//
+//    private void loginEvent() {
+////        btnDangki=findViewById(R.id.btn_dangki);
+//        btnDangki.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(TrangchinhActivity.this,LoginActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//    }
 }

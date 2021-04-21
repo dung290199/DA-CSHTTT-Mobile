@@ -9,6 +9,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.tutoringcenter.ldnd.dao.DictionaryDaoImpl;
+import com.tutoringcenter.ldnd.models.Word;
+
 public class LoginActivity extends AppCompatActivity {
     EditText edtUserName,edtPhone;
     Button dangNhap;
@@ -25,7 +28,10 @@ public class LoginActivity extends AppCompatActivity {
         dangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtUserName.setText("loanbaby");
+//                DictionaryDaoImpl a=new DictionaryDaoImpl();
+//                Word w=a.getWord("anh_viet","loan");
+//                System.out.println(w.getWord());
+                edtUserName.setText("loan");
             }
         });
     }
