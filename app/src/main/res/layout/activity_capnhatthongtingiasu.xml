@@ -144,11 +144,12 @@
                 android:layout_width="150dp"
                 android:layout_height="200dp"
                 android:layout_marginLeft="10dp"
-                android:id="@+id/img_avatar"
-                android:background="@drawable/avatar"
+                android:id="@+id/img_avatar"/>
+                //android:background="@drawable/avatar"
                 />
 
             <Button
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Upload"

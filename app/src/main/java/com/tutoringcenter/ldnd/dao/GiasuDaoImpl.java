@@ -11,7 +11,6 @@ import com.tutoringcenter.ldnd.connection.ConnectionManagerImpl;
 import com.tutoringcenter.ldnd.models.Word;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -27,14 +26,15 @@ import java.util.logging.Logger;
  *
  * @author ADMIN
  */
-public class DictionaryDaoImpl implements DictionaryDao {
+public class GiasuDaoImpl implements GiasuDao {
 
     private List<String> arr = new ArrayList<>();
     private final ConnectionManager connection;
 
-    public DictionaryDaoImpl() {
+    public GiasuDaoImpl() {
         connection = new ConnectionManagerImpl();
     }
+
 
     @Override
     public Word getWord(String name, String word) {
@@ -53,7 +53,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 resultWord.setContent(result.getString("content"));
             }
         } catch (SQLException ex) {
-            Logger.getLogger(DictionaryDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GiasuDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("tu: " );
         return resultWord;
@@ -78,7 +78,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 // arr.add(result.getString("word"));
             }
         } catch (SQLException ex) {
-            Logger.getLogger(DictionaryDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GiasuDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return map;
@@ -99,7 +99,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
                 map.put(result.getString("word"), result.getString("content"));
             }
         } catch (SQLException ex) {
-            Logger.getLogger(DictionaryDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GiasuDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return map;

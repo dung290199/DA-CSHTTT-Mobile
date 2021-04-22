@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">TutoringCenter</string>
-    <string name="hyperlink"><a href="https://twitter.com/tech_queen">Trung tâm gia sư</a></string>
-    <string name="gt"><a href="https://twitter.com/tech_queen">Giới thiệu</a></string>
-    <string name="lh"><a href="https://twitter.com/tech_queen">Liên hệ</a></string>
-    <string name="cs"><a href="https://twitter.com/tech_queen">Chính sách bảo mật</a></string>
-    <string name="dk"><a href="https://twitter.com/tech_queen">Đăng kí thuê gia sư</a></string>
+    <string name="hyperlink"><a href="">Trung tâm gia sư</a></string>
+    <string name="gt"><a href="">Giới thiệu</a></string>
+    <string name="lh"><a href="">Liên hệ</a></string>
+    <string name="cs"><a href="">Chính sách bảo mật</a></string>
+    <string name="dk"><a href="">Đăng kí thuê gia sư</a></string>
 
 </resources>

@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:ignore="ButtonStyle" >
+    tools:ignore="ButtonStyle"
+    tools:context=".TrangchinhActivity">
 
 <ScrollView
 android:layout_width="match_parent"
@@ -54,9 +55,9 @@ android:layout_height="match_parent" >
             android:layout_gravity="center"
             android:layout_height="50dp"
             android:background="@drawable/botron3"
-            android:id="@+id/btn_hoc"
+            android:id="@+id/btn_signup_teach"
             android:textSize="12sp"
-            android:text="Đăng kí học"/>
+            android:text="Đăng kí dạy"/>
 
     </LinearLayout>
     <LinearLayout
@@ -135,7 +136,7 @@ android:layout_height="match_parent" >
             android:layout_gravity="center"
             android:layout_height="50dp"
             android:background="@drawable/botron3"
-            android:id="@+id/btn_thue"
+            android:id="@+id/btn_signup_study"
             android:textSize="12sp"
             android:text="Đăng kí thuê gia sư"/>
 

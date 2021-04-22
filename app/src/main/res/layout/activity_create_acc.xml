@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context=".Activity_CreateAcc">
+    tools:context=".LoginActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,11 +58,9 @@
         android:layout_margin="40dp"
         android:background="@drawable/botron_button"
         android:text="CREATE ACC"
-
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#fff"
-        android:onClick="addacc"
         android:id="@+id/btn_cre"/>
 
 </LinearLayout>

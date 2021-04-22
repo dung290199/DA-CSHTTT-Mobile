@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".vd2"></activity>
+        <activity android:name=".CreateAccActivity"></activity>
+        <activity android:name=".NewTrangchinhActivity"></activity>
+        <activity android:name=".DangkiGiasuActivity"></activity>
+        <activity android:name=".ListviewActivity"></activity>
+        <activity android:name=".SuaxoalichdayActivity"></activity>
+        <activity android:name=".ThongkegiasuActivity"></activity>
+
 
     </application>
 

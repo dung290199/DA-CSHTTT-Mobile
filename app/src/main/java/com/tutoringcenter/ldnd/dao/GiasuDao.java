@@ -19,11 +19,11 @@ import java.util.Map;
  *
  * @author ADMIN
  */
-public interface DictionaryDao {
+public interface GiasuDao {
 
     Word getWord(String name, String word);
 
     Map<String, String> getWords(String name, String word);
 
-    public Map<String, String> getAll(String dic);
+    Map<String, String> getAll(String dic);
 }

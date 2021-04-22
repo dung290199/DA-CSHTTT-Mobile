@@ -38,7 +38,7 @@ public class CustomAdapterStudent extends ArrayAdapter<Teacher> {
             viewholder.tv_ten=convertView.findViewById(R.id.tv_ten);
 
             viewholder.tv_email=convertView.findViewById(R.id.tv_email);
-            viewholder.tv_sdt=convertView.findViewById(R.id.tv_sdt);
+            viewholder.tv_sdt=convertView.findViewById(R.id.tv_email);
 
             convertView.setTag(viewholder);
         }else{

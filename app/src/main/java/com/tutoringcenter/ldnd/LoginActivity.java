@@ -2,15 +2,12 @@ package com.tutoringcenter.ldnd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.tutoringcenter.ldnd.dao.DictionaryDaoImpl;
-import com.tutoringcenter.ldnd.models.Word;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edtUserName,edtPhone;
@@ -28,10 +25,10 @@ public class LoginActivity extends AppCompatActivity {
         dangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                DictionaryDaoImpl a=new DictionaryDaoImpl();
-//                Word w=a.getWord("anh_viet","loan");
-//                System.out.println(w.getWord());
+
                 edtUserName.setText("loan");
+                Intent i=new Intent(LoginActivity.this,CreateAccActivity.class);
+                startActivity(i);
             }
         });
     }

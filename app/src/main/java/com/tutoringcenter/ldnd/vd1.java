@@ -8,18 +8,18 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class TrangchinhActivity extends AppCompatActivity {
+public class vd1 extends AppCompatActivity {
     Button btnSignup;
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.vd1);
 
-        btnSignup=findViewById(R.id.btn_signup_teach);
+        btnSignup=(Button) findViewById(R.id.button1);
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(TrangchinhActivity.this,DangkiGiasuActivity.class);
+                Intent i=new Intent(vd1.this,CreateAccActivity.class);
                 startActivity(i);
             }
         });
