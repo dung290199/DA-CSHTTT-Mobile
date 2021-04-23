@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class vd2 extends AppCompatActivity {
@@ -13,13 +12,13 @@ public class vd2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vd1);
+        setContentView(R.layout.activity_timkiem);
 
         btnSignup=findViewById(R.id.button);
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(vd2.this,vd1.class);
+                Intent intent=new Intent(vd2.this, TimkiemActivity.class);
                 startActivity(intent);
             }
         });
