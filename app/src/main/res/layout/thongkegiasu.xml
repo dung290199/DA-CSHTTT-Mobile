@@ -50,7 +50,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/find"
+            android:background="@drawable/ic_search_black_24dp"
             android:textSize="30sp"
             android:id="@+id/bt">
 
