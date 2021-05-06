@@ -33,11 +33,11 @@ import static androidx.core.content.ContextCompat.getSystemService;
 
 public class LoginFragment extends Fragment {
 
-    Button btnLogin,btnExit;
-    EditText edtMail,edtPass;
-    private LoginViewModel loginViewModel;
+    Button btnLogin,btnExit,inout;
 
-Toolbar toolbar;
+    EditText edtMail,edtPass;
+    TextView tvWelcome;
+    private LoginViewModel loginViewModel;
     Button text;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -50,9 +50,13 @@ Toolbar toolbar;
         edtMail= (EditText) view.findViewById(R.id.edt_mail);
         edtPass= (EditText) view.findViewById(R.id.edt_password);
 
+
+
+
         AppBarLayout toolbar = (AppBarLayout) getActivity().findViewById(R.id.appbar);
-        Button topBack = (Button) toolbar.findViewById(R.id.btn_logout);
-        topBack.setText("loanloan");
+        inout = (Button) toolbar.findViewById(R.id.btn_logout);
+        tvWelcome=toolbar.findViewById(R.id.tv_welcome);
+
 
       //  getSupportActionBar().setDisplayShowTitleEnabled(false);
         edtPass.setInputType(InputType.TYPE_NULL);
@@ -78,6 +82,8 @@ Toolbar toolbar;
                             .getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtingiasuActivity());
                     fragmentTransaction.commit();
+                    inout.setText("Đăng xuất");
+                    tvWelcome.setVisibility(View.VISIBLE);
                 }
                 if(mail.equals("a")||password.equals("a")){
                     FragmentTransaction fragmentTransaction = getActivity()

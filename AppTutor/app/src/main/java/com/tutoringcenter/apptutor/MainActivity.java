@@ -4,39 +4,42 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.fragment.app.ListFragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
-import com.tutoringcenter.apptutor.ui.home.HomeFragment;
 import com.tutoringcenter.apptutor.ui.login.LoginFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    Button btnSignup;
+    Button btnLogin;
     FragmentManager fragmentManager;
-    Fragment fragment;
+    TextView tvWelcome;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainchinh);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        btnSignup=findViewById(R.id.btn_logout);
-fragmentManager=getSupportFragmentManager();
+        btnLogin=findViewById(R.id.btn_logout);
+        fragmentManager=getSupportFragmentManager();
+        tvWelcome=findViewById(R.id.tv_welcome);
+        tvWelcome.setVisibility(View.INVISIBLE);
 
-        btnSignup.setOnClickListener(new View.OnClickListener() {
+
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentTransaction fragmentTransaction1 = fragmentManager.beginTransaction();
@@ -63,7 +66,7 @@ fragmentManager=getSupportFragmentManager();
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu_student, menu);
         return true;
     }
 
