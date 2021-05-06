@@ -48,7 +48,25 @@
             android:background="@drawable/hinh"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:id="@+id/l_s"
+            >
+            <Spinner
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/Spinner_detail"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
 
+                android:entries="@array/Spinner_detail_student"
+                android:background="@drawable/vienden" />
+
+
+
+        </LinearLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 

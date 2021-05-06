@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnLogin;
     FragmentManager fragmentManager;
     TextView tvWelcome;
-
+Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager=getSupportFragmentManager();
         tvWelcome=findViewById(R.id.tv_welcome);
         tvWelcome.setVisibility(View.INVISIBLE);
-
-
+        spinner=findViewById(R.id.Spinner_detail);
+        spinner.setVisibility(View.INVISIBLE);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

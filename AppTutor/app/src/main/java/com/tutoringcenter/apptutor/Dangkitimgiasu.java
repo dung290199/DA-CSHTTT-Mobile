@@ -1,15 +1,11 @@
 package com.tutoringcenter.apptutor;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -20,17 +16,14 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.tutoringcenter.apptutor.ui.home.HomeFragment;
 import com.tutoringcenter.apptutor.ui.student.StudentFragment;
 
-public class ThongtingiasuActivity extends Fragment {
-    Spinner tutor;
-Spinner spinner;
+public class Dangkitimgiasu extends Fragment {
+    Spinner spinner;
+
     public View onCreateView(@NonNull final LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_thongtingiasu,container,false);
-        View a = inflater.inflate(R.layout.app_bar_main, container, false);
-        tutor = (Spinner) view.findViewById(R.id.Spinner_detail);
+        View view=inflater.inflate(R.layout.dangkitimgiasu,container,false);
         AppBarLayout toolbar = (AppBarLayout) getActivity().findViewById(R.id.appbar);
 
         spinner=toolbar.findViewById(R.id.Spinner_detail);
@@ -87,8 +80,6 @@ Spinner spinner;
             }
 
         });
-        tutor.setPrompt("Thông tin gia sư");
-
         return view;
     }
 

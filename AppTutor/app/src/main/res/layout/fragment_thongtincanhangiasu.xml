@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/whiteColor"
     android:orientation="vertical">
+
     <ImageView
         android:layout_width="150dp"
         android:layout_height="200dp"
@@ -154,48 +155,10 @@
             />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginLeft="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Ngành học"
-            android:textColor="#0C0202"
-            android:textStyle="bold" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edt_major"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Thời gian học"
-            android:textColor="#0C0202"
-            android:textStyle="bold" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edt_period"
-            android:layout_weight="1" />
-    </LinearLayout>
 
     <Button
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lưu thông tin cá nhân"

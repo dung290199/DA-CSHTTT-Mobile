@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -20,9 +22,11 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.material.appbar.AppBarLayout;
+import com.tutoringcenter.apptutor.Dangkitimgiasu;
 import com.tutoringcenter.apptutor.LoginMainFragment;
 import com.tutoringcenter.apptutor.NewTrangchinhActivity;
 import com.tutoringcenter.apptutor.R;
+import com.tutoringcenter.apptutor.ThongtincanhangiasuActivity;
 import com.tutoringcenter.apptutor.ThongtingiasuActivity;
 import com.tutoringcenter.apptutor.ThongtinhocsinhActivity;
 import com.tutoringcenter.apptutor.ui.grade.GradeFragment;
@@ -38,7 +42,7 @@ public class LoginFragment extends Fragment {
     EditText edtMail,edtPass;
     TextView tvWelcome;
     private LoginViewModel loginViewModel;
-    Button text;
+    Spinner spinner;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         loginViewModel =
@@ -52,13 +56,12 @@ public class LoginFragment extends Fragment {
 
 
 
-
         AppBarLayout toolbar = (AppBarLayout) getActivity().findViewById(R.id.appbar);
         inout = (Button) toolbar.findViewById(R.id.btn_logout);
         tvWelcome=toolbar.findViewById(R.id.tv_welcome);
+        spinner=toolbar.findViewById(R.id.Spinner_detail);
 
-
-      //  getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //  getSupportActionBar().setDisplayShowTitleEnabled(false);
         edtPass.setInputType(InputType.TYPE_NULL);
         if (android.os.Build.VERSION.SDK_INT >= 11) {
             edtPass.setRawInputType(InputType.TYPE_CLASS_TEXT);
@@ -71,19 +74,21 @@ public class LoginFragment extends Fragment {
                 String mail=edtMail.getText().toString().trim();
                 String password=edtMail.getText().toString().trim();
 
-                if(mail.equals("")){
-                    Toast.makeText(getActivity(),"Mời nhập email",Toast.LENGTH_SHORT).show();
-                }
-                if(password.equals("")){
-                    Toast.makeText(getActivity(),"Mời nhập password",Toast.LENGTH_SHORT).show();
-                }
-                if(mail.equals("loan")||password.equals("1234")){
+//                if(mail.equals("")){
+//                    Toast.makeText(getActivity(),"Mời nhập email",Toast.LENGTH_SHORT).show();
+//                }
+//                if(password.equals("")){
+//                    Toast.makeText(getActivity(),"Mời nhập password",Toast.LENGTH_SHORT).show();
+//                }
+                if(mail.equals("")||password.equals("")){
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtingiasuActivity());
+                    fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtincanhangiasuActivity());
                     fragmentTransaction.commit();
                     inout.setText("Đăng xuất");
                     tvWelcome.setVisibility(View.VISIBLE);
+                    spinner.setVisibility(View.VISIBLE);
+
                 }
                 if(mail.equals("a")||password.equals("a")){
                     FragmentTransaction fragmentTransaction = getActivity()
@@ -92,7 +97,7 @@ public class LoginFragment extends Fragment {
                     fragmentTransaction.commit();
                 }
                 else{
-                   // Toast.makeText(getActivity(), "Sai Email hoặc Password. Mời nhập lại .", Toast.LENGTH_LONG).show();
+                    // Toast.makeText(getActivity(), "Sai Email hoặc Password. Mời nhập lại .", Toast.LENGTH_LONG).show();
                 }
 
             }

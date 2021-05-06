@@ -9,14 +9,16 @@
     >
 
     <TextView
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="100dp"
         android:textSize="25dp"
-        android:layout_marginLeft="50sp"
+        android:textColor="@color/blackColor"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CÀI ĐẶT TÀI KHOẢN" />
 
     <EditText
+        android:layout_marginTop="20dp"
         android:id="@+id/old_pass"
         android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
         android:layout_width="match_parent"
@@ -45,25 +47,27 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50sp"
-        android:layout_marginTop="20sp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
         <Button
-            android:layout_gravity="center"
+
+            android:layout_gravity="top"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cập nhật"
+            android:background="@drawable/mau4"
             android:id="@+id/btn_update"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="cập nhật" />
-
+            />
         <Button
-            android:layout_marginLeft="100sp"
-            android:layout_gravity="center"
-            android:id="@+id/btn_back"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Trở về" />
+            android:text="Trở về"
+            android:background="@drawable/mau4"
+            android:id="@+id/btn_back"
+            />
     </LinearLayout>
-
-
 </LinearLayout>
