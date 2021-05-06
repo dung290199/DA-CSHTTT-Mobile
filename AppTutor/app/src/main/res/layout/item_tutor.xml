@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/vienden"
+    android:layout_marginTop="2dp"
+    android:orientation="vertical"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="horizontal">
+        <TextView
+            android:background="@color/blueColor"
+            android:id="@+id/tv_id"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hinh"
+            android:textColor="@color/blackColor"
+            android:textSize="20sp"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Họ tên"
+                android:layout_marginTop="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ngày sinh"
+                android:layout_marginTop="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_job"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nghề nghiệp"
+                android:layout_marginTop="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_workplace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Nơi làm việc"
+                />
+            <TextView
+                android:id="@+id/tv_major"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ngành"
+                android:layout_marginTop="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_graduate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Năm tốt nghiệp"
+                android:layout_marginTop="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_classStudy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Nhận dạy"
+                />
+            <TextView
+                android:id="@+id/tv_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Môn học"
+                android:layout_marginTop="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Khu vực"
+                />
+            <TextView
+                android:id="@+id/tv_salary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mức lương tối thiểu"
+                android:layout_marginTop="2dp"
+                />
+            <TextView
+                android:id="@+id/tv_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Thông tin thêm"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng kí học"
+        android:id="@+id/btn_signup_study"
+        android:background="@drawable/botron3"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"/>
+</LinearLayout>

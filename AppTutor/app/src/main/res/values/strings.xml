@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">AppTutor</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Trung tâm gia sư</string>
+    <string name="nav_header_subtitle">Liên Chiểu - Đà Nẵng</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_infor">Thông tin</string>
+    <string name="action_changePass">Đổi mật khẩu</string>
+    <string name="action_logout">Đăng xuất</string>
+
+
+    <string name="menu_home">Trang chủ</string>
+    <string name="menu_introduction">Giới thiệu</string>
+    <string name="menu_student">Phụ huynh - Học sinh</string>
+    <string name="menu_tutor">Gia sư</string>
+    <string name="menu_listClass">Danh sách lớp mới</string>
+    <string name="menu_fee">Học phí</string>
+    <string name="menu_login">Đăng nhập</string>
+
+    <string name="hyperlink"><a href="">Trung tâm gia sư</a></string>
+    <string name="gt"><a href="">Giới thiệu</a></string>
+    <string name="lh"><a href="">Liên hệ</a></string>
+    <string name="cs"><a href="">Chính sách bảo mật</a></string>
+    <string name="dk"><a href="">Đăng kí thuê gia sư</a></string>
+
+    <string name="detail_student">Thông tin học sinh</string>
+    <string-array name="Spinner_detail_student">
+        <item>Thông tin cá nhân</item>
+        <item>Đăng kí tìm gia sư</item>
+        <item>Lịch học</item>
+        <item>Note đăng kí </item>
+        <item>Đổi mật khẩu</item>
+    </string-array>
+    <string name="detail_tutor">Thông tin gia sư</string>
+    <string-array name="Spinner_detail_tutor">
+        <item>Thông tin cá nhân</item>
+        <item>Các lớp đã dạy</item>
+        <item>Thêm lịch dạy</item>
+        <item>Note nhận lớp </item>
+        <item>Đổi mật khẩu</item>
+    </string-array>
+    <string-array name="Spinner_tieuchi_hocsinh">
+        <item>Theo môn học</item>
+        <item>Theo lớp</item>
+        <item>Theo giới tính</item>
+        <item>Theo quê quán</item>
+
+    </string-array>
+    <string-array name="Spinner_tieuchi_giasu">
+        <item>Theo môn học</item>
+        <item>Theo tuổi</item>
+        <item>Theo giới tính</item>
+        <item>Theo quê quán</item>
+
+    </string-array>
+
+    <string name="country_prompt">Chọn Tỉnh/Thành Phố</string>
+    <string-array name="Spinner_Subjects">
+        <item>Toán học</item>
+        <item>Vật lí</item>
+        <item>Hóa học</item>
+        <item>Sinh học </item>
+        <item>Tiếng anh</item>
+        <item>Ngữ văn</item>
+        <item>Năng khiếu</item>
+        <item>Các môn khác</item>
+    </string-array>
+    <string-array name="Spinner_Levels">
+        <item>Mầm non</item>
+        <item>Cấp 1</item>
+        <item>Cấp 2</item>
+        <item>Cấp 3</item>
+        <item>Người đi làm</item>
+    </string-array>
+    <string-array name="Spinner_Requests">
+        <item>Sinh viên</item>
+        <item>Giáo viên</item>
+    </string-array>
+    <string-array name="Spinner_Area">
+        <item>Cẩm Lệ</item>
+        <item>Hải Châu</item>
+        <item>Liên Chiểu</item>
+        <item>Ngũ Hành Sơn</item>
+        <item>Sơn Trà</item>
+        <item>Thanh Khê</item>
+        <item>Hoàng Sa</item>
+        <item>Hòa Vang</item>
+
+    </string-array>
+
+    <string-array name="provinces" >
+        <item>Quận Hoà Vang</item>
+        <item>Quận Cẩm Lệ</item>
+        <item>Quận Hải Châu</item>
+        <item>Quận Liên Chiểu</item>
+        <item>Quận Ngũ Hành Sơn</item>
+        <item>Quận Sơn Trà</item>
+        <item>Quận Thanh Khê</item>
+    </string-array>
+
+    <string-array name="hoavang" >
+        <item>Phường Hòa Bắc</item>
+        <item>Phường Hòa Châu</item>
+        <item>Phường Hòa Khương</item>
+        <item>Phường Hoà Liên</item>
+        <item>Phường Hòa Nhơn</item>
+        <item>Phường Hòa Ninh</item>
+        <item>Phường Hòa Phong</item>
+        <item>Phường Hòa Phú</item>
+        <item>Phường Hoà Phước</item>
+        <item>Phường Hòa Sơn</item>
+        <item>Phường Hòa Tiến</item>
+    </string-array>
+
+    <string-array name="lienchieu" >
+        <item>Phường Hòa Hiệp Bắc</item>
+        <item>Phường Hòa Hiệp Nam</item>
+        <item>Phường Hòa Khánh Bắc</item>
+        <item>Phường Hoà Khánh Nam</item>
+        <item>Phường Hòa Minh</item>
+    </string-array>
+
+    <string-array name="thanhkhe" >
+        <item>Phường An Khê</item>
+        <item>Phường Chính Gián</item>
+        <item>Phường Hòa Khê</item>
+        <item>Phường Tam Thuận</item>
+        <item>Phường Tân Chính</item>
+        <item>Phường Thạc Gián</item>
+        <item>Phường Thanh Khê Đông</item>
+        <item>Phường Thanh Khê Tây</item>
+        <item>Phường Vĩnh Trung</item>
+        <item>Phường Xuân Hà</item>
+    </string-array>
+
+    <string-array name="haichau" >
+        <item>Phường Bình Hiên</item>
+        <item>Phường Bình Thuận</item>
+        <item>Phường Hải Châu I</item>
+        <item>Phường Hải Châu II</item>
+        <item>Phường Hòa Cường Bắc</item>
+        <item>Phường Hòa Cường Bắc</item>
+        <item>Phường Hòa Cường Nam</item>
+        <item>Phường Hoà Thuận Đông</item>
+        <item>Phường Hoà Thuận Tây</item>
+        <item>Phường Nam Dương</item>
+        <item>Phường Phước Ninh</item>
+        <item>Phường Thạch Thang</item>
+        <item>Phường Thanh Bình</item>
+        <item>Phường Thuận Phước</item>
+    </string-array>
+
+    <string-array name="camle" >
+        <item>Phường Hòa An,</item>
+        <item>Phường Hòa Phát</item>
+        <item>Phường Hòa Thọ Đông</item>
+        <item>Phường Hoà Thọ Tây</item>
+        <item>Phường Hòa Xuân</item>
+        <item>Phường Khuê Trung</item>
+    </string-array>
+
+    <string-array name="sontra" >
+        <item>Phường Thọ Quang</item>
+        <item>Phường Nại Hiên Đông</item>
+        <item>Phường Mân Thái</item>
+        <item>Phường An Hải Bắc</item>
+        <item>Phường An Hải Tây</item>
+        <item>Phường An Hải Đông</item>
+        <item>Phường An Phước Mỹ</item>
+    </string-array>
+
+    <string-array name="nguhanhson" >
+        <item>Phường Hòa Hải</item>
+        <item>Phường Hòa Quý</item>
+        <item>Phường Khuê Mỹ</item>
+        <item>Phường Mỹ An</item>
+    </string-array>
+
+</resources>

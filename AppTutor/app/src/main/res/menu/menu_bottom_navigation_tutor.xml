@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_infor"
+        android:title="Thông tin cá nhân"
+        />
+    <item
+        android:id="@+id/nav_listClass"
+        android:title="Các lớp đã dạy"
+        />
+    <item
+        android:id="@+id/nav_add"
+        android:title="Thêm lịch dạy"
+        />
+
+    <item
+        android:id="@+id/nav_note"
+        android:title="Note nhận lớp"
+        />
+    <item
+        android:id="@+id/nav_changePass"
+        android:title="Đổi mật khẩu"
+        />
+</menu>

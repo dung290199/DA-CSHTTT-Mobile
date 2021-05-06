@@ -1,0 +1,607 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:ignore="ButtonStyle"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm lịch dạy"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="@color/blackColor"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.Môn học bạn có thể dạy"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/blackColor"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Các môn tự nhiên"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/chuColor"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toán học"
+                        android:id="@+id/cb_toan"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Vật lí"
+                        android:id="@+id/cb_li"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hóa học"
+                        android:id="@+id/cb_hoa"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sinh học"
+                        android:id="@+id/cb_sinh"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tin học"
+                        android:id="@+id/cb_tin"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Các môn xã hội"
+                    android:textColor="@color/chuColor"
+                    android:textSize="15sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngữ văn"
+                        android:id="@+id/cb_van"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tiếng việt"
+                        android:id="@+id/cb_tv"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lịch sử"
+                        android:id="@+id/cb_su"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Địa lí"
+                        android:id="@+id/cb_dia"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Luyện chữ đẹp"
+                        android:id="@+id/cb_luyenchu"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Các môn ngoại ngữ"
+                    android:textColor="@color/chuColor"
+                    android:textSize="15sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tiếng Anh"
+                        android:id="@+id/cb_anh"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tiếng Nhật"
+                        android:id="@+id/cb_nhat"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tiếng Hàn"
+                        android:id="@+id/cb_han"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tiếng Pháp"
+                        android:id="@+id/cb_phap"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tiếng Trung"
+                        android:id="@+id/cb_trung"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tiếng Tây Ban Nha"
+                        android:id="@+id/cb_tbn"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ngoại ngữ khác"
+                        android:id="@+id/cb_nnkhac"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Các môn năng khiếu"
+                    android:textColor="@color/chuColor"
+                    android:textSize="15sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Piano"
+                        android:id="@+id/cb_piano"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Guitar"
+                        android:id="@+id/cb_guitar"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Organ"
+                        android:id="@+id/cb_organ"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mĩ thuật"
+                        android:id="@+id/cb_mithuat"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thanh nhạc"
+                        android:id="@+id/cb_thanhnhac"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.Lớp học bạn có thể dạy"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/blackColor"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cấp trung học phổ thông"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/chuColor"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Luyện thi đại học"
+                        android:id="@+id/cb_daihoc"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 12"
+                        android:id="@+id/cb_lop12"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 11"
+                        android:id="@+id/cb_lop11"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 10"
+                        android:id="@+id/cb_lop10"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Cấp THCS"
+                    android:textColor="@color/chuColor"
+                    android:textSize="15sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 6"
+                        android:id="@+id/cb_lop6"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 7"
+                        android:id="@+id/cb_lop7"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 8"
+                        android:id="@+id/cb_lop8"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 9"
+                        android:id="@+id/cb_lop9"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Cấp Tiểu học"
+                    android:textColor="@color/chuColor"
+                    android:textSize="15sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 1"
+                        android:id="@+id/cb_lop1"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 2"
+                        android:id="@+id/cb_lop2"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 3"
+                        android:id="@+id/cb_lop3"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 4"
+                        android:id="@+id/cb_lop4"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lớp 5"
+                        android:id="@+id/cb_lop5"
+                        android:textSize="12sp"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. Khu vực có thể dạy"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/blackColor"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quận"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/chuColor"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cẩm Lệ "
+                            android:id="@+id/cb_camle"
+                            android:textSize="12sp"
+                            />
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hải Châu"
+                            android:layout_marginLeft="100dp"
+                            android:id="@+id/cb_haichau"
+                            android:textSize="12sp"
+                            />
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Liên Chiểu"
+                            android:layout_marginLeft="200dp"
+                            android:id="@+id/cb_lienchieu"
+                            android:textSize="12sp"
+                            />
+
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sơn Trà "
+                            android:layout_marginTop="30dp"
+                            android:id="@+id/cb_sontra"
+                            android:textSize="12sp"
+                            />
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30sp"
+                            android:layout_marginLeft="100dp"
+                            android:id="@+id/cb_thanhkhe"
+                            android:text="Thanh Khê"
+                            android:textSize="12sp"
+                            />
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ngũ Hành Sơn "
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="200dp"
+                            android:id="@+id/cb_nguhanhsown"
+                            android:textSize="12sp"
+                            />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Huyện"
+                    android:textColor="@color/chuColor"
+                    android:textSize="15sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hoàng Sa"
+                        android:id="@+id/cb_hoangsa"
+                        android:textSize="12sp"
+                        />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hòa Vang"
+                        android:id="@+id/cb_hoavang"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.Tỉnh/Thành phố"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/blackColor"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đà Nẵng"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/chuColor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_exit"
+                    android:text="Hủy"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cập nhật"
+                    android:id="@+id/btn_update"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

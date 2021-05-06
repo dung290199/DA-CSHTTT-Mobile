@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@drawable/nentrang"
+    android:layout_height="120dp">
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:textColor="#fff"
+        android:id="@+id/tv_id"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:background="#6A7BDD"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Le Luong "
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:id="@+id/tv_fullName"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lớp 5"
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/tv_grade"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="0788655989 "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/tv_phone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lí do: Không nộp tiền lương cho giáo viên"
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/tv_reason"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
