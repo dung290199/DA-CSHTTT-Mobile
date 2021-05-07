@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/whiteColor"
-    tools:context=".DangkiGiasuActivity">
+    tools:context=".ui.tutor.DangkiGiasuActivity">
     <!--    private String username ;-->
     <!--    private String password;-->
     <!--    private String email ;-->

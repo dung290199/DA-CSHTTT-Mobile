@@ -1,20 +1,14 @@
 package com.tutoringcenter.apptutor.ui.login;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.text.InputType;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -22,18 +16,9 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.material.appbar.AppBarLayout;
-import com.tutoringcenter.apptutor.Dangkitimgiasu;
-import com.tutoringcenter.apptutor.LoginMainFragment;
-import com.tutoringcenter.apptutor.NewTrangchinhActivity;
 import com.tutoringcenter.apptutor.R;
-import com.tutoringcenter.apptutor.ThongtincanhangiasuActivity;
-import com.tutoringcenter.apptutor.ThongtingiasuActivity;
-import com.tutoringcenter.apptutor.ThongtinhocsinhActivity;
-import com.tutoringcenter.apptutor.ui.grade.GradeFragment;
+import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 import com.tutoringcenter.apptutor.ui.home.HomeFragment;
-
-import static android.content.Context.INPUT_METHOD_SERVICE;
-import static androidx.core.content.ContextCompat.getSystemService;
 
 public class LoginFragment extends Fragment {
 
@@ -93,7 +78,7 @@ public class LoginFragment extends Fragment {
                 if(mail.equals("a")||password.equals("a")){
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtinhocsinhActivity());
+                    fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtincanhangiasuActivity());
                     fragmentTransaction.commit();
                 }
                 else{

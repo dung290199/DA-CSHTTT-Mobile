@@ -1,13 +1,14 @@
-package com.tutoringcenter.apptutor;
+package com.tutoringcenter.apptutor.ui.tutor;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.tutoringcenter.apptutor.NewTrangchinhActivity;
+import com.tutoringcenter.apptutor.R;
 
 public class Suaxoalichday_Activity extends AppCompatActivity {
     Button btnCreate;
@@ -23,7 +24,7 @@ public class Suaxoalichday_Activity extends AppCompatActivity {
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(Suaxoalichday_Activity.this,NewTrangchinhActivity.class);
+                Intent i=new Intent(Suaxoalichday_Activity.this, NewTrangchinhActivity.class);
                 startActivity(i);
             }
         });

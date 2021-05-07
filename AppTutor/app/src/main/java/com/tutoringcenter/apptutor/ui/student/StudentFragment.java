@@ -1,7 +1,6 @@
 package com.tutoringcenter.apptutor.ui.student;
 
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +16,9 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.material.appbar.AppBarLayout;
-import com.tutoringcenter.apptutor.Dangkitimgiasu;
 import com.tutoringcenter.apptutor.Doimatkhau;
 import com.tutoringcenter.apptutor.R;
-import com.tutoringcenter.apptutor.ThongtincanhangiasuActivity;
+import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 import com.tutoringcenter.apptutor.ui.grade.GradeFragment;
 
 public class StudentFragment extends Fragment {
@@ -56,9 +54,7 @@ public class StudentFragment extends Fragment {
                 // your code here
                 int a= (int) spinner.getItemIdAtPosition(position);
                 String  SpinerValue3 = spinner.getItemAtPosition(position).toString();
-                Toast.makeText(getActivity().getBaseContext(),
-                        "You have selected 222 : " + SpinerValue3,
-                        Toast.LENGTH_SHORT).show();
+
                 if (a==0) {
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();

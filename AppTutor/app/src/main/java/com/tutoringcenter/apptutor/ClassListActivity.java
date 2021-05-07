@@ -24,7 +24,7 @@ public class ClassListActivity extends AppCompatActivity {
         List<View> a=getView();
 
         List<Grade> image_details = getListClassData();
-        final ListView listView = (ListView) findViewById(R.id.listView);
+        final ListView listView = (ListView) findViewById(R.id.lv_listView);
         TextView textTittle=(TextView) findViewById(R.id.tv_tittle) ;
         textTittle.setText("Danh sách lớp");
 

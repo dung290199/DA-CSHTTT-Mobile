@@ -1,26 +1,20 @@
 package com.tutoringcenter.apptutor.ui.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.tutoringcenter.apptutor.DangkiGiasuActivity;
-import com.tutoringcenter.apptutor.DangkiHocsinhActivity;
+import com.tutoringcenter.apptutor.ui.tutor.DangkiGiasuActivity;
+import com.tutoringcenter.apptutor.ui.student.DangkiHocsinhActivity;
 import com.tutoringcenter.apptutor.R;
-import com.tutoringcenter.apptutor.ui.introduction.IntroductionFragment;
-import com.tutoringcenter.apptutor.ui.student.StudentFragment;
 
 public class HomeFragment extends Fragment {
 

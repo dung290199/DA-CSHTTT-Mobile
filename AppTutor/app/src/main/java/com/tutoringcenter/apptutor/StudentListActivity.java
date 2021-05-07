@@ -25,10 +25,11 @@ public class StudentListActivity extends AppCompatActivity {
         ///   List<View> a=getView();
 
         List<Student> image_details = getListStudentData();
-        final ListView listView = (ListView) findViewById(R.id.listView);
+        final ListView listView = (ListView) findViewById(R.id.lv_listView);
         TextView textTittle = (TextView) findViewById(R.id.tv_tittle);
         listView.setAdapter(new StudentListViewAdapter(this, image_details));
         textTittle.setText("Danh sách lớp");
+
 
         // When the user clicks on the ListItem
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

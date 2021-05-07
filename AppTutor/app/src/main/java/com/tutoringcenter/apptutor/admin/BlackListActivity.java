@@ -1,4 +1,4 @@
-package com.tutoringcenter.apptutor;
+package com.tutoringcenter.apptutor.admin;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.tutoringcenter.apptutor.R;
 import com.tutoringcenter.apptutor.adapter.BlackListAdapter;
 import com.tutoringcenter.apptutor.models.Black;
 
@@ -25,7 +26,7 @@ public class BlackListActivity extends AppCompatActivity {
         List<View> a=getView();
 
         List<Black> image_details = getListTutorData();
-        final ListView listView = (ListView) findViewById(R.id.listView);
+        final ListView listView = (ListView) findViewById(R.id.lv_listView);
         TextView textTittle=(TextView) findViewById(R.id.tv_tittle) ;
         listView.setAdapter(new BlackListAdapter(this, image_details));
         textTittle.setText("Danh sách đen");
@@ -40,6 +41,7 @@ public class BlackListActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     private  List<Black> getListTutorData() {

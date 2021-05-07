@@ -21,7 +21,7 @@
         </activity>
         <activity android:name=".CreateAccActivity"></activity>
         <activity android:name=".NewTrangchinhActivity"></activity>
-        <activity android:name=".DangkiGiasuActivity"></activity>
+        <activity android:name=".ui.tutor.DangkiGiasuActivity"></activity>
     </application>
 
 </manifest>

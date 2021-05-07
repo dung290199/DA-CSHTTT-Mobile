@@ -13,7 +13,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.appbar.AppBarLayout;
+import com.tutoringcenter.apptutor.ui.student.DangkiHocsinhActivity;
+import com.tutoringcenter.apptutor.ui.student.Dangkitimgiasu;
 import com.tutoringcenter.apptutor.ui.student.StudentFragment;
+import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 
 public class Doimatkhau extends Fragment {
     Spinner spinner;
@@ -31,9 +34,7 @@ public class Doimatkhau extends Fragment {
                 // your code here
                 int a= (int) spinner.getItemIdAtPosition(position);
                 String  SpinerValue3 = spinner.getItemAtPosition(position).toString();
-                Toast.makeText(getActivity().getBaseContext(),
-                        "You have selected 222 : " + SpinerValue3,
-                        Toast.LENGTH_SHORT).show();
+
                 if (a==0) {
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();

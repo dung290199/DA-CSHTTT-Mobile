@@ -26,7 +26,7 @@ public class ListviewActivity extends AppCompatActivity {
         List<View> a=getView();
 
         List<Tutor> image_details = getListTutorData();
-        final ListView listView = (ListView) findViewById(R.id.listView);
+        final ListView listView = (ListView) findViewById(R.id.lv_listView);
         TextView textTittle=(TextView) findViewById(R.id.tv_tittle) ;
         listView.setAdapter(new TutorListViewAdapter(this, image_details));
         textTittle.setText("loanloan");

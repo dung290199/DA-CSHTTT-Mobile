@@ -1,5 +1,6 @@
-package com.tutoringcenter.apptutor;
+package com.tutoringcenter.apptutor.ui.tutor;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,21 +10,26 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.tutoringcenter.apptutor.R;
 import com.tutoringcenter.apptutor.ui.home.HomeFragment;
 import com.tutoringcenter.apptutor.ui.student.StudentFragment;
 
-public class DangkiHocsinhActivity extends Fragment {
-    Button btnConfirm;
+public class DangkiGiasuActivity extends Fragment {
+    Button btnConfirm,btnUpload,btnCv;
     EditText edtFullName,edtPhone,edtBirthday,edtAddress,edtEmail,edtGender;
     public View onCreateView(@NonNull final LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
 
-        View view=inflater.inflate(R.layout.activity_dangkithongtinhocsinh,container,false);
+        View view=inflater.inflate(R.layout.activity_dangkithongtingiasu,container,false);
 
         btnConfirm=(Button) view.findViewById(R.id.btn_confirm);
+        btnUpload= (Button) view.findViewById(R.id.btn_upload);
+        btnCv=(Button) view.findViewById(R.id.btn_cv);
         edtFullName= (EditText) view.findViewById(R.id.edt_fullName);
         edtPhone= (EditText) view.findViewById(R.id.edt_phone);
         edtBirthday= (EditText) view.findViewById(R.id.edt_birthday);
@@ -60,7 +66,24 @@ public class DangkiHocsinhActivity extends Fragment {
             }
         });
 
-
+        btnCv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                        .getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment,new HomeFragment());
+                fragmentTransaction.commit();
+            }
+        });
+        btnUpload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                        .getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment,new HomeFragment());
+                fragmentTransaction.commit();
+            }
+        });
 
         return view;
     }
