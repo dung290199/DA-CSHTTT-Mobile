@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DoiMatKhauFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="40dp"
+            android:textSize="25dp"
+            android:layout_marginLeft="50sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CÀI ĐẶT TÀI KHOẢN" />
+
+        <EditText
+            android:id="@+id/old_pass"
+            android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:hint=" Nhập mật khẩu cũ"
+            />
+
+        <EditText
+            android:id="@+id/new_pass"
+            android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:hint=" Nhập mật khẩu mới"
+            />
+
+        <EditText
+            android:id="@+id/re_new_pass"
+            android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:hint=" Nhập lại mật khẩu mới"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:layout_marginTop="20sp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cập nhật" />
+
+            <Button
+                android:layout_marginLeft="100sp"
+                android:layout_gravity="center"
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trở về" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

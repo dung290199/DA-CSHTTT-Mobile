@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_canhan"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Thông tin cá nhân" />
+        <item
+            android:id="@+id/nav_timkiem"
+            android:icon="@drawable/ic_baseline_search_24"
+            android:title="Tìm kiếm khoá học" />
+        <item
+            android:id="@+id/nav_dangky"
+            android:icon="@drawable/ic_baseline_book_24"
+            android:title="Đăng ký lớp học" />
+        <item
+            android:id="@+id/nav_lophoc"
+            android:icon="@drawable/ic_baseline_calendar_today_24"
+            android:title="Lớp học của tôi" />
+        <item
+            android:id="@+id/nav_danhgia"
+            android:icon="@drawable/ic_baseline_thumb_up_24"
+            android:title="Đánh giá gia sư" />
+        <item
+            android:id="@+id/nav_doimatkhau"
+            android:icon="@drawable/ic_baseline_vpn_key_24"
+            android:title="Đổi mật khẩu" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="Thông tin về ứng dụng" />
+    </group>
+</menu>
