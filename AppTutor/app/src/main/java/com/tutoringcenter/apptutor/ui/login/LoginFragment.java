@@ -17,6 +17,10 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.tutoringcenter.apptutor.R;
+import com.tutoringcenter.apptutor.admin.BlackListActivityfake;
+import com.tutoringcenter.apptutor.admin.Review;
+import com.tutoringcenter.apptutor.admin.ThongtincanhangiasuActivity1;
+import com.tutoringcenter.apptutor.ui.student.ThongtincanhanhocsinhActivity;
 import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 import com.tutoringcenter.apptutor.ui.home.HomeFragment;
 
@@ -68,14 +72,14 @@ public class LoginFragment extends Fragment {
                 if(mail.equals("")||password.equals("")){
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtincanhangiasuActivity());
+                    fragmentTransaction.replace(R.id.nav_host_fragment,new Review());
                     fragmentTransaction.commit();
                     inout.setText("Đăng xuất");
                     tvWelcome.setVisibility(View.VISIBLE);
                     spinner.setVisibility(View.VISIBLE);
 
                 }
-                if(mail.equals("a")||password.equals("a")){
+                if(mail.equals("gia su")||password.equals("a")){
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtincanhangiasuActivity());

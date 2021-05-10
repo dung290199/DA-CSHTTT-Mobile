@@ -17,7 +17,7 @@
             android:id="@+id/tv_tittle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Danh sách sinh viên"
+            android:text="Danh sách đánh giá"
             android:textColor="@color/blackColor"
             android:gravity="center"
             android:textSize="30sp"

@@ -4,7 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.tutoringcenter.apptutor.R;
@@ -38,11 +37,11 @@ public class ClassListViewAdapter extends ArrayAdapter<Grade> {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.item_class, null);
+            convertView = layoutInflater.inflate(R.layout.lichday, null);
             holder = new ViewHolder();
-            holder.id = (TextView) convertView.findViewById(R.id.textView_countryName);
-            holder.nameClass = (TextView) convertView.findViewById(R.id.textView_countryName);
-            holder.request = (TextView) convertView.findViewById(R.id.textView_population);
+//            holder.id = (TextView) convertView.findViewById(R.id.textView_countryName);
+//            holder.nameClass = (TextView) convertView.findViewById(R.id.textView_countryName);
+//            holder.request = (TextView) convertView.findViewById(R.id.textView_population);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

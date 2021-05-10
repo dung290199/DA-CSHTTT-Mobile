@@ -6,19 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ListviewActivity"
+    android:background="@color/whiteColor"
     android:orientation="vertical">
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center">
-    <TextView
-        android:gravity="center"
-        android:textSize="35dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/blackColor"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="Thống kê học sinh"/>
+<!--    <TextView-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="35dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textColor="@color/blackColor"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="Thống kê gia sư"/>-->
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

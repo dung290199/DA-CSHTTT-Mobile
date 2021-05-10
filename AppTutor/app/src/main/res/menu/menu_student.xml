@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/is_infor"
-        android:icon="@drawable/ic_menu_camera"
-        android:title="Thông tin cá nhân"
-        />
-    <item
-        android:id="@+id/is_signin"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="Đăng kí tìm gia sư" />
-    <item
-        android:id="@+id/is_calendar"
-        android:icon="@drawable/ic_menu_slideshow"
-        android:title="Lịch học" />
-    <item
-        android:id="@+id/is_note"
-        android:icon="@drawable/ic_menu_manage"
-        android:title="Note đăng kí" />
-    <item
-        android:id="@+id/is_changepass"
-        android:icon="@drawable/ic_menu_share"
-        android:title="Đổi mật khẩu" />
+
 
 </menu>

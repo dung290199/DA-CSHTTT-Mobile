@@ -1,6 +1,5 @@
 package com.tutoringcenter.apptutor.ui.tutor;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,14 +9,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.tutoringcenter.apptutor.R;
 import com.tutoringcenter.apptutor.ui.home.HomeFragment;
-import com.tutoringcenter.apptutor.ui.student.StudentFragment;
+import com.tutoringcenter.apptutor.ui.student.Timkiem;
 
 public class DangkiGiasuActivity extends Fragment {
     Button btnConfirm,btnUpload,btnCv;
@@ -56,7 +53,7 @@ public class DangkiGiasuActivity extends Fragment {
                 if(fullName.equals("l")||phone.equals("a")||date.equals("a")||address.equals("a")||email.equals("a")||gender.equals("a")){
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment,new StudentFragment());
+                    fragmentTransaction.replace(R.id.nav_host_fragment,new Timkiem());
                     fragmentTransaction.commit();
                 }
                 else{

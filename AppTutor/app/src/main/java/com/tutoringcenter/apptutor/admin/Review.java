@@ -21,13 +21,13 @@ import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlackListActivityfake extends Fragment {
+public class Review extends Fragment {
 
     SpinnerFunction sf;
 
     Spinner spinner;
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_student,container,false);
+        View view=inflater.inflate(R.layout.listview,container,false);
 
 
         List<Black> image_details = getListTutorData();
@@ -41,7 +41,7 @@ public class BlackListActivityfake extends Fragment {
         spinner=toolbar.findViewById(R.id.Spinner_detail);
         FragmentTransaction fragmentTransaction = getActivity()
                 .getSupportFragmentManager().beginTransaction();
-        listView.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
                 fragmentTransaction.replace(R.id.nav_host_fragment, new ThongtincanhangiasuActivity());
@@ -71,7 +71,8 @@ public class BlackListActivityfake extends Fragment {
 
 
         List<Black> list = new ArrayList<Black>();
-        Black vietnam = new Black("Nguyễn Thùy Linh","Môn Toán","Lớp 1","Quảng Nam") ;
+        Black vietnam = new Black("Học sinh: Nguyễn Thùy Linh","Dạy tốt,thân thiện với học sinh","Ngày 12/12/2020","") ;
+        Black a = new Black("Học sinh: Trần Thanh Tâm","Có tâm, luôn đến đúng giờ","Ngày 11/05/2020","") ;
 //        Black usa = new Black("Trần Minh","Môn Toán","Lớp 1","Bình Định") ;
 //        Black russia = new Black("Lê Hồng","Môn Toán","Lớp 2","Đà Nẵng") ;
 //        Black loan = new Black("Nguyễn Nhàn","Môn Toán","Lớp 3","Gia Lai") ;
@@ -86,6 +87,7 @@ public class BlackListActivityfake extends Fragment {
 //        list.add(c);
 //        list.add(b);list.add(e);
         list.add(vietnam);
+        list.add(a);
         return list;
     }
 

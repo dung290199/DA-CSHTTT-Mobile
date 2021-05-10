@@ -11,20 +11,24 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.tutoringcenter.apptutor.Doimatkhau;
 import com.tutoringcenter.apptutor.R;
-import com.tutoringcenter.apptutor.ui.student.DangkiHocsinhActivity;
-import com.tutoringcenter.apptutor.ui.student.StudentFragment;
+import com.tutoringcenter.apptutor.SpinnerFunction;
 import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 
 public class ThongtincanhanhocsinhActivity extends Fragment {
     Spinner student;
+    SpinnerFunction sf;
 
     public View onCreateView(@NonNull final LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_thongtincanhanhocsinh,container,false);
-        student = (Spinner) view.findViewById(R.id.Spinner_detail);
+        AppBarLayout toolbar = (AppBarLayout) getActivity().findViewById(R.id.appbar);
 
+        student = (Spinner) toolbar.findViewById(R.id.Spinner_detail);
+        FragmentTransaction fragmentTransaction = getActivity()
+                .getSupportFragmentManager().beginTransaction();
         student.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -33,34 +37,27 @@ public class ThongtincanhanhocsinhActivity extends Fragment {
                 if (a==0) {
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
+
                     fragmentTransaction.replace(R.id.nav_host_fragment, new ThongtincanhangiasuActivity());
                     fragmentTransaction.commit();
                 }
                 if(a==1){
 
-                    FragmentTransaction fragmentTransaction = getActivity()
-                            .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new StudentFragment());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new Dangkihoc());
                     fragmentTransaction.commit();
                 }
                 if(a==2){
 
-                    FragmentTransaction fragmentTransaction = getActivity()
-                            .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new StudentFragment());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new Timkiem());
                     fragmentTransaction.commit();
                 }
                 if(a==3){
 
-                    FragmentTransaction fragmentTransaction = getActivity()
-                            .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new StudentFragment());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new Lopdanghoc());
                     fragmentTransaction.commit();
                 }
                 if(a==4){
 
-                    FragmentTransaction fragmentTransaction = getActivity()
-                            .getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.nav_host_fragment, new Doimatkhau());
                     fragmentTransaction.commit();
                 }

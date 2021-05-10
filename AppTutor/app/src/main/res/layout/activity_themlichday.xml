@@ -6,8 +6,8 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:ignore="ButtonStyle"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp">
+    android:background="@color/whiteColor"
+   >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -451,6 +451,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+
                 android:orientation="vertical">
 
                 <TextView
@@ -588,16 +589,21 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_height="wrap_content">
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/btn_exit"
+                    android:background="@drawable/botron4"
+                    android:layout_marginRight="30dp"
                     android:text="Hủy"/>
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cập nhật"
+                    android:background="@drawable/botron4"
                     android:id="@+id/btn_update"/>
             </LinearLayout>
 

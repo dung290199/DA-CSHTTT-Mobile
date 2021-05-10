@@ -20,15 +20,16 @@
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:gravity="center"
+           android:layout_marginBottom="30dp"
            android:orientation="horizontal">
 
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="Đăng kí thông tin"
-               android:textColor="#0C0202"
+               android:text="Đăng kí thông tin   học sinh"
+               android:textColor="#0627D1"
                android:textStyle="bold"
-               android:textSize="30dp"
+               android:textSize="40dp"
                android:gravity="center"
                android:layout_gravity="center"/>
 
@@ -50,6 +51,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/edt_fullName"
+               android:text="Lê Loan"
                />
        </LinearLayout>
 
@@ -69,6 +71,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/edt_birthday"
+               android:text="01/01/2008"
                />
        </LinearLayout>
 
@@ -88,6 +91,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/edt_phone"
+               android:text="0123456789"
                android:layout_weight="1" />
        </LinearLayout>
 
@@ -107,6 +111,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/edt_address"
+               android:text="Thanh Khê, Đà Nẵng"
                android:layout_weight="1" />
        </LinearLayout>
 
@@ -123,11 +128,14 @@
                android:textColor="#0C0202"
                android:textStyle="bold" />
 
-           <EditText
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/edt_gender"
-               android:layout_weight="1" />
+           <Spinner
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="2dp"
+               android:id="@+id/Spinner_gender"
+               android:layout_width="100dp"
+               android:layout_height="30dp"
+               android:entries="@array/Spinner_gender"
+               android:background="@drawable/vienden" />
        </LinearLayout>
 
        <LinearLayout
@@ -146,6 +154,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/edt_email"
+               android:text="leanh@gmail.com"
                android:layout_weight="1" />
        </LinearLayout>
 
@@ -163,7 +172,14 @@
                android:background="@drawable/botron3"
                android:id="@+id/btn_confirm"
                android:text="Xác nhận"/>
-
+           <Button
+               android:layout_width="167dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginLeft="20dp"
+               android:background="@drawable/botron3"
+               android:id="@+id/btn_back"
+               android:text="Quay lại"/>
 
        </LinearLayout>
    </LinearLayout>

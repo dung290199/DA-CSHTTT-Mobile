@@ -10,13 +10,13 @@
     <string name="action_logout">Đăng xuất</string>
 
 
-    <string name="menu_home">Trang chủ</string>
+    <string name="menu_home"></string>
     <string name="menu_introduction">Giới thiệu</string>
     <string name="menu_student">Phụ huynh - Học sinh</string>
     <string name="menu_tutor">Gia sư</string>
     <string name="menu_listClass">Danh sách lớp mới</string>
     <string name="menu_fee">Học phí</string>
-    <string name="menu_login">Đăng nhập</string>
+    <string name="menu_login">Đăng kí</string>
 
     <string name="hyperlink"><a href="">Trung tâm gia sư</a></string>
     <string name="gt"><a href="">Giới thiệu</a></string>
@@ -27,19 +27,45 @@
     <string name="detail_student">Thông tin học sinh</string>
     <string-array name="Spinner_detail_student">
         <item>Thông tin cá nhân</item>
-        <item>Đăng kí tìm gia sư</item>
-        <item>Lịch học</item>
-        <item>Note đăng kí </item>
+        <item>Đăng kí học </item>
+        <item>Tìm kiếm</item>
+        <item>Lớp đang học</item>
         <item>Đổi mật khẩu</item>
+    </string-array>
+
+    <string-array name="Spinner_gender">
+        <item>Nữ</item>
+        <item>Nam</item>
+    </string-array>
+    <string-array name="Spinner_grade">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
     </string-array>
     <string name="detail_tutor">Thông tin gia sư</string>
     <string-array name="Spinner_detail_tutor">
+        <item>Đánh giá</item>
         <item>Thông tin cá nhân</item>
-        <item>Các lớp đã dạy</item>
-        <item>Thêm lịch dạy</item>
-        <item>Note nhận lớp </item>
+        <item>Đăng kí học</item>
+        <item>Lịch dạy</item>
+        <item>Duyệt đăng kí học</item>
+        <item>Tìm kiếm</item>
         <item>Đổi mật khẩu</item>
     </string-array>
+    <string-array name="Spinner_detail_admin">
+    <item>Thống kê đánh giá</item>
+    <item>Danh sách đăng kí</item>
+    <item>Đổi mật khẩu</item>
+</string-array>
     <string-array name="Spinner_tieuchi_hocsinh">
         <item>Theo môn học</item>
         <item>Theo lớp</item>

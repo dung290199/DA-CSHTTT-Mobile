@@ -3,6 +3,7 @@ package com.tutoringcenter.apptutor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -36,9 +37,17 @@ Spinner spinner;
         btnLogin=findViewById(R.id.btn_logout);
         fragmentManager=getSupportFragmentManager();
         tvWelcome=findViewById(R.id.tv_welcome);
-        tvWelcome.setVisibility(View.INVISIBLE);
+        tvWelcome.setVisibility(View.VISIBLE);
         spinner=findViewById(R.id.Spinner_detail);
-        spinner.setVisibility(View.INVISIBLE);
+        spinner.setVisibility(View.VISIBLE);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.Spinner_detail_tutor,
+                R.layout.spinner_layout
+        );
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        spinner.setAdapter(adapter);
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +64,7 @@ Spinner spinner;
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_introdution, R.id.nav_student,
-                R.id.nav_tutor, R.id.nav_listClass, R.id.nav_fee,R.id.nav_login)
+                R.id.nav_tutor, R.id.nav_listClass, R.id.nav_fee)
                 .setDrawerLayout(drawer)
                 .build();
 

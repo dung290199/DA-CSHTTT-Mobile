@@ -4,20 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.material.appbar.AppBarLayout;
-import com.tutoringcenter.apptutor.Doimatkhau;
 import com.tutoringcenter.apptutor.R;
-import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 
 public class DangkiHocsinhActivity extends Fragment {
     Button btnConfirm;
@@ -54,7 +49,7 @@ public class DangkiHocsinhActivity extends Fragment {
                 if(fullName.equals("l")||phone.equals("a")||date.equals("a")||address.equals("a")||email.equals("a")||gender.equals("a")){
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment,new StudentFragment());
+                    fragmentTransaction.replace(R.id.nav_host_fragment,new Timkiem());
                     fragmentTransaction.commit();
                 }
                 else{

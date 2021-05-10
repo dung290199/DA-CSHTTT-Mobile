@@ -1,4 +1,4 @@
-package com.tutoringcenter.apptutor.admin;
+package com.tutoringcenter.apptutor.ui.student;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,7 +21,7 @@ import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlackListActivityfake extends Fragment {
+public class Timkiem extends Fragment {
 
     SpinnerFunction sf;
 
@@ -41,7 +41,7 @@ public class BlackListActivityfake extends Fragment {
         spinner=toolbar.findViewById(R.id.Spinner_detail);
         FragmentTransaction fragmentTransaction = getActivity()
                 .getSupportFragmentManager().beginTransaction();
-        listView.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
                 fragmentTransaction.replace(R.id.nav_host_fragment, new ThongtincanhangiasuActivity());
@@ -71,7 +71,7 @@ public class BlackListActivityfake extends Fragment {
 
 
         List<Black> list = new ArrayList<Black>();
-        Black vietnam = new Black("Nguyễn Thùy Linh","Môn Toán","Lớp 1","Quảng Nam") ;
+        Black vietnam = new Black("Le Loan","Môn Toán","Lớp 1","Quảng Nam") ;
 //        Black usa = new Black("Trần Minh","Môn Toán","Lớp 1","Bình Định") ;
 //        Black russia = new Black("Lê Hồng","Môn Toán","Lớp 2","Đà Nẵng") ;
 //        Black loan = new Black("Nguyễn Nhàn","Môn Toán","Lớp 3","Gia Lai") ;

@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -51,14 +50,14 @@ public class Dangkitimgiasu extends Fragment {
 
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new StudentFragment());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new Timkiem());
                     fragmentTransaction.commit();
                 }
                 if(a==3){
 
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new StudentFragment());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new Timkiem());
                     fragmentTransaction.commit();
                 }
                 if(a==4){

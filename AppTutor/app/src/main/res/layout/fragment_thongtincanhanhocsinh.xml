@@ -5,164 +5,214 @@
     android:background="@color/whiteColor"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/chandung"
-        android:onClick="uploadImage"/>
-
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Họ tên"
-            android:textColor="#0C0202"
-            android:textStyle="bold" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edt_fullName"
-            />
-    </LinearLayout>
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="150dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ngày sinh"
-            android:textColor="#0C0202"
-            android:textStyle="bold" />
-
-        <EditText
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Ảnh đại diện"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:id="@+id/img_avatar"
+                android:background="@drawable/chandung"
+                android:onClick="uploadImage"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edt_birthday"
-            />
-    </LinearLayout>
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:orientation="horizontal">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Họ tên"
+                android:textColor="#0C0202"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Số điện thoại"
-            android:textColor="#0C0202"
-            android:textStyle="bold" />
-
-        <EditText
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_fullName"
+                android:text="Lê Loan"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edt_phone"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Giới tính"
+                android:textColor="#0C0202"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="150dp"
+            <Spinner
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/Spinner_gender"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:entries="@array/Spinner_gender"
+                android:background="@drawable/vienden" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_height="wrap_content"
-            android:text="Quê quán"
-            android:textColor="#0C0202"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
 
-        <EditText
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Ngày sinh"
+                android:textColor="#0C0202"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_birthday"
+                android:text="01/01/2008"
+                />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edt_address"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Số điện thoại"
+                android:textColor="#0C0202"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="150dp"
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_phone"
+                android:text="0123456789"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_height="wrap_content"
-            android:text="Giới tính"
-            android:textColor="#0C0202"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
 
-        <EditText
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Quê quán"
+                android:textColor="#0C0202"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_address"
+                android:text="Quảng Nam"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Trường học"
+                android:textColor="#0C0202"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_school"
+                android:text="Tiểu học Ngô Thì Nhậm"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edt_gender"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_marginLeft="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Lớp"
+                android:textColor="#0C0202"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:textColor="#0C0202"
-            android:textStyle="bold" />
+            <Spinner
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/Spinner_grade"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:entries="@array/Spinner_grade"
+                android:background="@drawable/vienden" />
+        </LinearLayout>
 
-        <EditText
+
+        <LinearLayout
             android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_height="wrap_content"
-            android:id="@+id/edt_email"
-            android:layout_weight="1" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Họ tên phụ huynh"
+                android:textColor="#0C0202"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_parent"
+                android:text="Lê Anh"
+                />
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lưu thông tin cá nhân"
+            android:background="@drawable/xacnhan"
+            android:layout_gravity="center"/>
+
     </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Trường học"
-            android:textColor="#0C0202"
-            android:textStyle="bold" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edt_school"
-            />
-    </LinearLayout>
-
-
-
-    <Button
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lưu thông tin cá nhân"
-        android:background="@drawable/xacnhan"
-        android:layout_gravity="center"/>
-
+</ScrollView>
 </LinearLayout>

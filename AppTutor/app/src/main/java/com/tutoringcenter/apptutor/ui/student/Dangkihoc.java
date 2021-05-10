@@ -1,4 +1,4 @@
-package com.tutoringcenter.apptutor.ui.tutor;
+package com.tutoringcenter.apptutor.ui.student;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,21 +14,19 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.appbar.AppBarLayout;
 import com.tutoringcenter.apptutor.Doimatkhau;
 import com.tutoringcenter.apptutor.R;
-import com.tutoringcenter.apptutor.SpinnerFunction;
-import com.tutoringcenter.apptutor.admin.Review;
+import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 
-public class ThongtincanhangiasuActivity extends Fragment {
+public class Dangkihoc extends Fragment {
     Spinner spinner;
-    SpinnerFunction sf;
+
     public View onCreateView(@NonNull final LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
-     //   mTestArray = getResources().getStringArray(R.array.Spinner_detail_tutor);
-        View view=inflater.inflate(R.layout.fragment_thongtincanhangiasu,container,false);
+        View view=inflater.inflate(R.layout.item_tutor,container,false);
         AppBarLayout toolbar = (AppBarLayout) getActivity().findViewById(R.id.appbar);
-        FragmentTransaction fragmentTransaction = getActivity()
-                .getSupportFragmentManager().beginTransaction();
 
         spinner=toolbar.findViewById(R.id.Spinner_detail);
+        FragmentTransaction fragmentTransaction = getActivity()
+                .getSupportFragmentManager().beginTransaction();
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -36,31 +34,28 @@ public class ThongtincanhangiasuActivity extends Fragment {
                 // your code here
                 int a= (int) spinner.getItemIdAtPosition(position);
                 String  SpinerValue3 = spinner.getItemAtPosition(position).toString();
+
                 if (a==0) {
 
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new Review());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new ThongtincanhangiasuActivity());
                     fragmentTransaction.commit();
                 }
                 if(a==1){
 
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new Themlichday());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new Dangkihoc());
                     fragmentTransaction.commit();
                 }
                 if(a==2){
 
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new Lichday());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new Timkiem());
                     fragmentTransaction.commit();
                 }
                 if(a==3){
 
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new Duyetdangkihoc());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new Lopdanghoc());
                     fragmentTransaction.commit();
                 }
                 if(a==4){
-
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new Doimatkhau());
-                    fragmentTransaction.commit();
-                } if(a==5){
 
                     fragmentTransaction.replace(R.id.nav_host_fragment, new Doimatkhau());
                     fragmentTransaction.commit();
