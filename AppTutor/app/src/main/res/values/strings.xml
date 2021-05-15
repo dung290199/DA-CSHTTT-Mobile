@@ -53,9 +53,9 @@
     </string-array>
     <string name="detail_tutor">Thông tin gia sư</string>
     <string-array name="Spinner_detail_tutor">
-        <item>Đánh giá</item>
+        <item>Xem đánh giá</item>
         <item>Thông tin cá nhân</item>
-        <item>Đăng kí học</item>
+        <item>Thêm lịch dạy</item>
         <item>Lịch dạy</item>
         <item>Duyệt đăng kí học</item>
         <item>Tìm kiếm</item>

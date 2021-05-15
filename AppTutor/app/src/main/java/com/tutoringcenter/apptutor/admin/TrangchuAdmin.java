@@ -16,10 +16,9 @@ import com.tutoringcenter.apptutor.Doimatkhau;
 import com.tutoringcenter.apptutor.R;
 import com.tutoringcenter.apptutor.SpinnerFunction;
 import com.tutoringcenter.apptutor.ui.tutor.Duyetdangkihoc;
-import com.tutoringcenter.apptutor.ui.tutor.Lichday;
 import com.tutoringcenter.apptutor.ui.tutor.Themlichday;
 
-public class ThongtincanhangiasuActivity1 extends Fragment {
+public class TrangchuAdmin extends Fragment {
     Spinner spinner;
     SpinnerFunction sf;
     public View onCreateView(@NonNull final LayoutInflater inflater,
@@ -40,7 +39,7 @@ public class ThongtincanhangiasuActivity1 extends Fragment {
                 String  SpinerValue3 = spinner.getItemAtPosition(position).toString();
                 if (a==0) {
 
-                    fragmentTransaction.replace(R.id.nav_host_fragment, new ThongtincanhangiasuActivity1());
+                    fragmentTransaction.replace(R.id.nav_host_fragment, new TrangchuAdmin());
                     fragmentTransaction.commit();
                 }
                 if(a==1){

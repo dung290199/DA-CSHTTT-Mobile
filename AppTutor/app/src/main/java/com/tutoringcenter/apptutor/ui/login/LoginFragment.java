@@ -5,6 +5,7 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -17,10 +18,6 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.tutoringcenter.apptutor.R;
-import com.tutoringcenter.apptutor.admin.BlackListActivityfake;
-import com.tutoringcenter.apptutor.admin.Review;
-import com.tutoringcenter.apptutor.admin.ThongtincanhangiasuActivity1;
-import com.tutoringcenter.apptutor.ui.student.ThongtincanhanhocsinhActivity;
 import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
 import com.tutoringcenter.apptutor.ui.home.HomeFragment;
 
@@ -69,17 +66,37 @@ public class LoginFragment extends Fragment {
 //                if(password.equals("")){
 //                    Toast.makeText(getActivity(),"Mời nhập password",Toast.LENGTH_SHORT).show();
 //                }
-                if(mail.equals("")||password.equals("")){
+                if(mail.equals("giasu")||password.equals("")){
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.nav_host_fragment,new Review());
+                    fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtincanhangiasuActivity());
                     fragmentTransaction.commit();
                     inout.setText("Đăng xuất");
+                    tvWelcome.setText("Chào ...");
                     tvWelcome.setVisibility(View.VISIBLE);
                     spinner.setVisibility(View.VISIBLE);
 
                 }
-                if(mail.equals("gia su")||password.equals("a")){
+                if(mail.equals("hocsinh")||password.equals("")){
+                    FragmentTransaction fragmentTransaction = getActivity()
+                            .getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtincanhangiasuActivity());
+                    fragmentTransaction.commit();
+
+                    ArrayAdapter adapter = ArrayAdapter.createFromResource(
+                            getActivity(),
+                            R.array.Spinner_detail_student,
+                            R.layout.spinner_layout
+                    );
+                    adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+                    spinner.setAdapter(adapter);
+
+                    inout.setText("Đăng xuất");
+                    tvWelcome.setText("Chào ...");
+                    tvWelcome.setVisibility(View.VISIBLE);
+                    spinner.setVisibility(View.VISIBLE);
+                }
+                if(mail.equals("admin")||password.equals("")){
                     FragmentTransaction fragmentTransaction = getActivity()
                             .getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.nav_host_fragment,new ThongtincanhangiasuActivity());

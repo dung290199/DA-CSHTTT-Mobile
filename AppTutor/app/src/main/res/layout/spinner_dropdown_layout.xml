@@ -4,6 +4,6 @@
     android:layout_height="30dp"
     android:textColor="@color/blackColor"
     android:background="@color/whiteColor"
-    android:textSize="15sp">
+    android:textSize="18sp">
 
 </TextView>

@@ -37,9 +37,9 @@ Spinner spinner;
         btnLogin=findViewById(R.id.btn_logout);
         fragmentManager=getSupportFragmentManager();
         tvWelcome=findViewById(R.id.tv_welcome);
-        tvWelcome.setVisibility(View.VISIBLE);
+        tvWelcome.setVisibility(View.INVISIBLE);
         spinner=findViewById(R.id.Spinner_detail);
-        spinner.setVisibility(View.VISIBLE);
+        spinner.setVisibility(View.INVISIBLE);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.Spinner_detail_tutor,

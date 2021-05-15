@@ -24,14 +24,15 @@
                        android:layout_height="wrap_content"
                        android:layout_marginLeft="20dp"
                        android:text="Ảnh đại diện"/>
+
                    <ImageView
+                       android:id="@+id/img_avatar"
                        android:layout_width="150dp"
                        android:layout_height="200dp"
                        android:layout_marginLeft="20dp"
                        android:layout_marginTop="0dp"
-                       android:id="@+id/img_avatar"
                        android:background="@drawable/chandung"
-                       android:onClick="uploadImage"/>
+                       android:onClick="uploadImage" />
                </LinearLayout>
                <!--        <LinearLayout-->
                <!--            android:layout_width="wrap_content"-->
@@ -230,14 +231,14 @@
            </LinearLayout>
 
 
-
            <Button
-               android:layout_marginTop="20dp"
+               android:id="@+id/btn_confirm"
                android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Lưu thông tin cá nhân"
+               android:layout_height="43dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
                android:background="@drawable/xacnhan"
-               android:layout_gravity="center"/>
+               android:text="Lưu thông tin cá nhân" />
        </LinearLayout>
    </ScrollView>
 

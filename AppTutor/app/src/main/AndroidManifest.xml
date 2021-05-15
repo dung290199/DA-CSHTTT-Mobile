@@ -20,8 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateAccActivity"></activity>
-        <activity android:name=".NewTrangchinhActivity"></activity>
+        <activity android:name=".Main"></activity>
         <activity android:name=".ui.tutor.DangkiGiasuActivity"></activity>
     </application>
 

@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.tutoringcenter.apptutor.ui.tutor.ThongtincanhangiasuActivity;
+
 
 public class CreateAccActivity extends AppCompatActivity {
 
@@ -23,7 +25,7 @@ public class CreateAccActivity extends AppCompatActivity {
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(CreateAccActivity.this,NewTrangchinhActivity.class);
+                Intent i=new Intent(CreateAccActivity.this, ThongtincanhangiasuActivity.class);
                 startActivity(i);
             }
         });
