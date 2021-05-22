@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">tutorReady</string>
+    <string name="gt"><a href="">Giới thiệu</a></string>
+    <string name="lh"><a href="">Liên hệ</a></string>
+    <string name="cs"><a href="">Chính sách bảo mật</a></string>
+    <string name="dk"><a href="">Đăng kí thuê gia sư</a></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
