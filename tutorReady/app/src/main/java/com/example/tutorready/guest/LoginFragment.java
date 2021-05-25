@@ -64,9 +64,7 @@ public class LoginFragment extends Fragment {
                 else {
                     Login(data_name,data_pass);
 
-                    Intent intent = new Intent(getActivity(), MainActivity3.class);
-                    //intent.putExtra("data_name", "pass");
-                    startActivity(intent);
+
                 }
             }
         });
@@ -82,7 +80,7 @@ public class LoginFragment extends Fragment {
         //Toast.makeText(getActivity(), "Thông tin đã nhập " + data_name + data_pass, Toast.LENGTH_SHORT).show();
 
         //http://192.168.1.12:5000/api/auth/login
-        final String url = "http://192.168.1.12:5000/api/auth/login";
+        final String url = "http://192.168.1.7:5000/api/auth/login";
 
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -103,17 +101,17 @@ public class LoginFragment extends Fragment {
                         JSONObject jsonObject1 = new JSONObject(user);
                         //id = (String) jsonObject1.getString("_id");
                         String role = (String) jsonObject1.getString("role");
-                        if (role =="STUDENT") {
+                        if (role.equals("STUDENT")) {
                            Intent intent = new Intent(getActivity(), MainActivity3.class);
                            //intent.putExtra("data_name", "pass");
                            startActivity(intent);
                         }
-                        if (role =="ADMIN") {
+                        if (role.equals("ADMIN")) {
                             Intent intent = new Intent(getActivity(), MainActivity2.class);
                             //intent.putExtra("data_name", "pass");
                             startActivity(intent);
                         }
-                        if (role =="TUTOR") {
+                        if (role.equals("TUTOR")) {
                             Intent intent = new Intent(getActivity(), MainActivity3.class);
                             intent.putExtra("data_name", "pass");
                             startActivity(intent);
