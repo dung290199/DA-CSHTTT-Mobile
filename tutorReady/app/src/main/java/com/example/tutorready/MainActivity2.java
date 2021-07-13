@@ -1,143 +1,85 @@
 package com.example.tutorready;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import com.example.tutorready.admin.DanhSachDangKyFragment;
-import com.example.tutorready.admin.StudentFragment;
-import com.example.tutorready.admin.TutorFragment;
-import com.example.tutorready.guest.FeeFragment;
-import com.example.tutorready.guest.HomeFragment;
-import com.example.tutorready.guest.MessagesFragment;
-import com.example.tutorready.guest.LoginFragment;
-import com.example.tutorready.guest.SignUpFragment;
-import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
-import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    // Admin
+    EditText edt_username, edt_password;
+    Button btn_login;
+    String data_name, data_pass;
 
-    SNavigationDrawer sNavigationDrawer;
-    Class fragmentClass;
-    public static Fragment fragment;
-
+    //Login
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         initControl();
+
+        edt_username = findViewById(R.id.edt_username);
+        edt_password = findViewById(R.id.edt_password);
+
+        btn_login = findViewById(R.id.btn_login);
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                data_name = edt_username.getText().toString().trim();
+                data_pass = edt_password.getText().toString().trim();
+
+                if ( data_name.length() == 0|| data_pass.length() == 0){
+                    Toast.makeText(MainActivity2.this, "Mời bạn nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Login(data_name,data_pass);
+                }
+            }
+        });
+
     }
 
-    private void initControl() {//Inside onCreate()
-
-        sNavigationDrawer = findViewById(R.id.navigationDrawer);
-
-        //Creating a list of menu Items
-
-        List<MenuItem> menuItems = new ArrayList<>();
-
-        //Use the MenuItem given by this library and not the default one.
-        //First parameter is the title of the menu item and then the second parameter is the image which will be the background of the menu item.
-
-        menuItems.add(new MenuItem("Trang chủ",R.drawable.news_bg));
-        menuItems.add(new MenuItem("Học sinh",R.drawable.feed_bg));
-        menuItems.add(new MenuItem("Gia sư",R.drawable.message_bg));
-        menuItems.add(new MenuItem("Danh sách đăng ký học",R.drawable.music_bg));
-        menuItems.add(new MenuItem("Học phí tham khảo",R.drawable.music_bg));
-
-        //then add them to navigation drawer
-
-        sNavigationDrawer.setMenuItemList(menuItems);
-        fragmentClass =  HomeFragment.class;
-        try {
-            fragment = (Fragment) fragmentClass.newInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out).replace(R.id.frameLayout, fragment).commit();
-        }
+    private void Login(String data_name, String data_pass) {
 
 
+    }
 
-        //Listener to handle the menu item click. It returns the position of the menu item clicked. Based on that you can switch between the fragments.
+    private void initControl() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
-        sNavigationDrawer.setOnMenuItemClickListener(new SNavigationDrawer.OnMenuItemClickListener() {
+        bottomNavigationView.setSelectedItemId(R.id.login);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onMenuItemClicked(int position) {
-                System.out.println("Position "+position);
-
-                switch (position){
-                    case 0:{
-                        fragmentClass = HomeFragment.class;
-                        break;
-                    }
-                    case 1:{
-                        fragmentClass = StudentFragment.class;
-                        break;
-                    }
-                    case 2:{
-                        fragmentClass = TutorFragment.class;
-                        break;
-                    }
-                    case 3:{
-                        fragmentClass = DanhSachDangKyFragment.class;
-                        break;
-                    }
-                    case 4: {
-                        fragmentClass = FeeFragment.class;
-                        break;
-                    }
+            public boolean onNavigationItemSelected( MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.login:
+                        startActivity(new Intent(getApplicationContext(),MainActivity2.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.signup:
+                        startActivity(new Intent(getApplicationContext(),MainActivity3.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.fee:
+                        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
-
-                //Listener for drawer events such as opening and closing.
-                sNavigationDrawer.setDrawerListener(new SNavigationDrawer.DrawerListener() {
-
-                    @Override
-                    public void onDrawerOpened() {
-
-                    }
-
-                    @Override
-                    public void onDrawerOpening(){
-
-                    }
-
-                    @Override
-                    public void onDrawerClosing(){
-                        System.out.println("Drawer closed");
-
-                        try {
-                            fragment = (Fragment) fragmentClass.newInstance();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-
-                        if (fragment != null) {
-                            FragmentManager fragmentManager = getSupportFragmentManager();
-                            fragmentManager.beginTransaction().setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out).replace(R.id.frameLayout, fragment).commit();
-
-                        }
-                    }
-
-                    @Override
-                    public void onDrawerClosed() {
-
-                    }
-
-                    @Override
-                    public void onDrawerStateChanged(int newState) {
-                        System.out.println("State "+newState);
-                    }
-                });
+                return false;
             }
         });
     }

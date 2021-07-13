@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -19,9 +18,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.tutorready.MainActivity2;
-import com.example.tutorready.MainActivity3;
-import com.example.tutorready.MainActivity4;
+import com.example.tutorready.ActivityAdmin;
+import com.example.tutorready.ActivityStudent;
 import com.example.tutorready.R;
 
 import org.json.JSONException;
@@ -102,17 +100,17 @@ public class LoginFragment extends Fragment {
                         //id = (String) jsonObject1.getString("_id");
                         String role = (String) jsonObject1.getString("role");
                         if (role.equals("STUDENT")) {
-                           Intent intent = new Intent(getActivity(), MainActivity3.class);
+                           Intent intent = new Intent(getActivity(), ActivityStudent.class);
                            //intent.putExtra("data_name", "pass");
                            startActivity(intent);
                         }
                         if (role.equals("ADMIN")) {
-                            Intent intent = new Intent(getActivity(), MainActivity2.class);
+                            Intent intent = new Intent(getActivity(), ActivityAdmin.class);
                             //intent.putExtra("data_name", "pass");
                             startActivity(intent);
                         }
                         if (role.equals("TUTOR")) {
-                            Intent intent = new Intent(getActivity(), MainActivity3.class);
+                            Intent intent = new Intent(getActivity(), ActivityStudent.class);
                             intent.putExtra("data_name", "pass");
                             startActivity(intent);
                         }
