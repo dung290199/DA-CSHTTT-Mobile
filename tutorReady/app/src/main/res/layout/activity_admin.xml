@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".ActivityAdmin">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ADMIN" />
+
+    <!--
     <com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,5 +22,6 @@
             android:layout_height="match_parent"/>
 
     </com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer>
+    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

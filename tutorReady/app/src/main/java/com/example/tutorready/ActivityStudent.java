@@ -3,6 +3,7 @@ package com.example.tutorready;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -15,12 +16,21 @@ public class ActivityStudent extends AppCompatActivity {
     Class fragmentClass1;
     public static Fragment fragment1;
 
+    String id,token;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
         //initControl1();
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("data");
+        id = bundle.getString("id_user");
+        token = bundle.getString("token_user");
+
     }
+
 
     /*private void initControl1() {sNavigationDrawer1 = findViewById(R.id.navigationDrawer3);
 
