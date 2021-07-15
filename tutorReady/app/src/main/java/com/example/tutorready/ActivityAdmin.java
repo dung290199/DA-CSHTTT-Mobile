@@ -12,16 +12,21 @@ public class ActivityAdmin extends AppCompatActivity {
 
     // Admin
 
-    SNavigationDrawer sNavigationDrawer;
-    Class fragmentClass;
-    public static Fragment fragment;
+    //SNavigationDrawer sNavigationDrawer;
+    //Class fragmentClass;
+    //public static Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
         //initControl();
+
+
     }
+
+
+    //UI
 
     /*private void initControl() {//Inside onCreate()
 

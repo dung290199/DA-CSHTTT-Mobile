@@ -5,17 +5,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity3 extends AppCompatActivity {
 
     //Sign Up
+    ImageView imageView;
+    TextView nameCV;
+    String  data_username,data_fullname , data_email, data_phone,data_pass,data_repass,data_address ,data_birthday;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         initControl();
+
+        //imageView = findViewById(R.id.imageView);
+        //imageView.setImageResource(R.drawable.logo);
+
+
     }
 
     private void initControl() {

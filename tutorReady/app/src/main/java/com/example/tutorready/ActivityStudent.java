@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 
 import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
@@ -12,9 +13,9 @@ import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
 public class ActivityStudent extends AppCompatActivity {
 
     // học sinh
-    SNavigationDrawer sNavigationDrawer1;
-    Class fragmentClass1;
-    public static Fragment fragment1;
+    //SNavigationDrawer sNavigationDrawer1;
+    //Class fragmentClass1;
+    //public static Fragment fragment1;
 
     String id,token;
 
@@ -22,12 +23,24 @@ public class ActivityStudent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
+
+
         //initControl1();
 
+
+        // Nhận chuỗi token và id user
+
         Intent intent = getIntent();
-        Bundle bundle = intent.getBundleExtra("data");
-        id = bundle.getString("id_user");
-        token = bundle.getString("token_user");
+        Bundle bundle = intent.getExtras();
+        id = bundle.getString("id_user","");
+        token = bundle.getString("token_user","");
+
+
+
+        //Toast.makeText(ActivityStudent.this, "Mời bạn nhập đầy đủ thông tin" +token , Toast.LENGTH_SHORT).show();
+
+
+
 
     }
 
