@@ -2,9 +2,10 @@ package com.example.tutorready;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.security.keystore.UserNotAuthenticatedException;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,12 +40,14 @@ public class MainActivity2 extends AppCompatActivity {
     String id, role, token,birthday,address,picture,CV,email,user, phone, fullname;
     Boolean gender;
 
+
     //Login
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         initControl();
+
 
         edt_username = findViewById(R.id.edt_username);
         edt_password = findViewById(R.id.edt_password);
@@ -81,7 +85,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         Toast.makeText(MainActivity2.this, "Thông tin đã nhập " + data_name + data_pass, Toast.LENGTH_SHORT).show();
 
-        final String url = "http://192.168.1.5:5000/api/auth/login";
+        final String url = "http://192.168.1.8:5000/api/auth/login";
 
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -123,6 +127,8 @@ public class MainActivity2 extends AppCompatActivity {
 
                         //Toast.makeText(MainActivity2.this, "Đăng !", Toast.LENGTH_SHORT).show();
 
+
+                        /*
                         Toast.makeText(MainActivity2.this, "VẬY LÀ : " + id + role, Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(MainActivity2.this, ActivityStudent.class);
@@ -145,7 +151,7 @@ public class MainActivity2 extends AppCompatActivity {
                         startActivity(intent);
 
 
-                        /*
+                        */
                         if (role.equals("STUDENT")) {
 
                             Intent intent = new Intent(MainActivity2.this, ActivityStudent.class);
@@ -204,7 +210,7 @@ public class MainActivity2 extends AppCompatActivity {
                             intent.putExtras(bundle);
                             startActivity(intent);
                         }
-                        */
+
 
 
                         //Toast.makeText(LoginActivity.this, "VÀO", Toast.LENGTH_SHORT).show();
@@ -227,7 +233,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("username",data_name);
+                params.put("username", data_name);
                 params.put("password",data_pass);
                 return params;
             }
@@ -253,7 +259,7 @@ public class MainActivity2 extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.signup:
-                        startActivity(new Intent(getApplicationContext(),MainActivity3.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity3.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.fee:

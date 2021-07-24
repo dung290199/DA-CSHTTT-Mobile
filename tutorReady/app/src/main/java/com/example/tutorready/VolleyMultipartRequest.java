@@ -84,6 +84,16 @@ public class VolleyMultipartRequest extends Request<NetworkResponse> {
 
     @Override
     protected Response<NetworkResponse> parseNetworkResponse(NetworkResponse response) {
+
+
+        /*return Response.success(
+                    gson.fromJson(json, clazz),
+                    HttpHeaderParser.parseCacheHeaders(response));
+
+         */
+
+
+
         try {
             return Response.success(
                     response,

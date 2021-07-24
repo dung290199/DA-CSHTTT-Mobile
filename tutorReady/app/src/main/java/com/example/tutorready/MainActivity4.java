@@ -15,6 +15,7 @@ public class MainActivity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+
         initControl();
 
     }
@@ -38,7 +39,7 @@ public class MainActivity4 extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.signup:
-                        startActivity(new Intent(getApplicationContext(),MainActivity3.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity3.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.fee:

@@ -1,6 +1,5 @@
 package com.example.tutorready;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
+    public static final int FCR = 1;
 
     //Home
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"Mời bạn đăng ký",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity3Fix.class);
                 startActivity(intent);
             }
         });
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"Mời bạn đăng ký",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity3Fix.class);
                 startActivity(intent);
             }
         });
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.signup:
-                        startActivity(new Intent(getApplicationContext(),MainActivity3.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity3.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.fee:

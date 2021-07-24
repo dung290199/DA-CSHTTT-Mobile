@@ -2,22 +2,31 @@ package com.example.tutorready;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
 
+import com.example.tutorready.student.LichHocFragment;
+import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
 import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ActivityStudent extends AppCompatActivity {
 
     // học sinh
-    //SNavigationDrawer sNavigationDrawer1;
-    //Class fragmentClass1;
-    //public static Fragment fragment1;
+    SNavigationDrawer sNavigationDrawer2;
+    Class fragmentClass1;
+    public static Fragment fragment1;
 
-    String id,token;
+    String id,token,role,email,fullname,birthday,address,phone,user;
+    Boolean gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,19 +34,27 @@ public class ActivityStudent extends AppCompatActivity {
         setContentView(R.layout.activity_student);
 
 
-        //initControl1();
+        initControl1();
 
 
         // Nhận chuỗi token và id user
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        id = bundle.getString("id_user","");
-        token = bundle.getString("token_user","");
+        id = bundle.getString("id_user");
+        token = bundle.getString("token_user");
+        role = bundle.getString("role_user");
+        user = bundle.getString("user");
+        email = bundle.getString("email_user");
+        fullname = bundle.getString("fullname");
+        birthday = bundle.getString("birthday");
+        phone = bundle.getString("phone");
+        address = bundle.getString("address");
+        gender = bundle.getBoolean("gender");
 
 
 
-        //Toast.makeText(ActivityStudent.this, "Mời bạn nhập đầy đủ thông tin" +token , Toast.LENGTH_SHORT).show();
+        Toast.makeText(ActivityStudent.this, "Mời bạn nhập đầy đủ thông tin" +id + token + role + user + email + fullname+ gender , Toast.LENGTH_SHORT).show();
 
 
 
@@ -45,7 +62,7 @@ public class ActivityStudent extends AppCompatActivity {
     }
 
 
-    /*private void initControl1() {sNavigationDrawer1 = findViewById(R.id.navigationDrawer3);
+    private void initControl1() {sNavigationDrawer2 = findViewById(R.id.navigationDrawer2);
 
         //Creating a list of menu Items
 
@@ -55,16 +72,16 @@ public class ActivityStudent extends AppCompatActivity {
         //First parameter is the title of the menu item and then the second parameter is the image which will be the background of the menu item.
 
         menuItems1.add(new MenuItem("Trang chủ",R.drawable.news_bg));
-        menuItems1.add(new MenuItem("Lịch học",R.drawable.feed_bg));
-        menuItems1.add(new MenuItem("Tìm lớp học",R.drawable.message_bg));
-        menuItems1.add(new MenuItem("Tìm gia sư",R.drawable.music_bg));
-        menuItems1.add(new MenuItem("Học phí tham khảo",R.drawable.music_bg));
-        menuItems1.add(new MenuItem("Thông tin cá nhân",R.drawable.music_bg));
+        menuItems1.add(new MenuItem("Đăng xuất",R.drawable.feed_bg));
+        //menuItems1.add(new MenuItem("Tìm lớp học",R.drawable.message_bg));
+        //menuItems1.add(new MenuItem("Tìm gia sư",R.drawable.music_bg));
+        //menuItems1.add(new MenuItem("Học phí tham khảo",R.drawable.music_bg));
+        //menuItems1.add(new MenuItem("Thông tin cá nhân",R.drawable.music_bg));
 
         //then add them to navigation drawer
 
-        sNavigationDrawer1.setMenuItemList(menuItems1);
-        fragmentClass1 =  SignUpFragment.class;
+        sNavigationDrawer2.setMenuItemList(menuItems1);
+        fragmentClass1 =  LichHocFragment.class;
         try {
             fragment1 = (Fragment) fragmentClass1.newInstance();
         } catch (Exception e) {
@@ -75,24 +92,34 @@ public class ActivityStudent extends AppCompatActivity {
             fragmentManager.beginTransaction().setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out).replace(R.id.frameLayout, fragment1).commit();
         }
 
-
-
         //Listener to handle the menu item click. It returns the position of the menu item clicked. Based on that you can switch between the fragments.
 
-        sNavigationDrawer1.setOnMenuItemClickListener(new SNavigationDrawer.OnMenuItemClickListener() {
+        sNavigationDrawer2.setOnMenuItemClickListener(new SNavigationDrawer.OnMenuItemClickListener() {
             @Override
             public void onMenuItemClicked(int position) {
                 System.out.println("Position "+position);
 
                 switch (position){
                     case 0:{
-                        fragmentClass1 = HomeFragment.class;
-                        break;
-                    }
-                    case 1:{
                         fragmentClass1 = LichHocFragment.class;
                         break;
                     }
+                    case 1:{
+                        Intent intent = new Intent(ActivityStudent.this, MainActivity.class);
+                        token ="";
+                        id = "";
+                        role = "";
+                        user = "";
+                        email = "";
+                        fullname = "";
+                        birthday = "";
+                        phone = "";
+                        startActivity(intent);
+                        onBackPressed();
+                        finish();
+                        break;
+                    }
+                    /*
                     case 2:{
                         fragmentClass1 = TimLopHocFragment.class;
                         break;
@@ -110,10 +137,12 @@ public class ActivityStudent extends AppCompatActivity {
                         break;
                     }
 
+                    */
+
                 }
 
                 //Listener for drawer events such as opening and closing.
-                sNavigationDrawer1.setDrawerListener(new SNavigationDrawer.DrawerListener() {
+                sNavigationDrawer2.setDrawerListener(new SNavigationDrawer.DrawerListener() {
 
                     @Override
                     public void onDrawerOpened() {
@@ -154,5 +183,5 @@ public class ActivityStudent extends AppCompatActivity {
                 });
             }
         });
-    }*/
+    }
 }

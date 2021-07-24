@@ -6,9 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ActivityTutor">
 
-    <TextView
+    <com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="TUTOR" />
+        android:id="@+id/navigationDrawer3">
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer>
 
 </LinearLayout>
