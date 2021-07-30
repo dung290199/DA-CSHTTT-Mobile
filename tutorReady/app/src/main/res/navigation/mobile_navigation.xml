@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.tutorready.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_introdution"
+        android:name="com.example.tutorready.ui.introduction.IntroductionFragment"
+        android:label="@string/menu_introduction"
+        tools:layout="@layout/fragment_fee" />
+
+    <fragment
+        android:id="@+id/nav_student"
+        android:name="com.example.tutorready.ui.student.Timkiem"
+        android:label="@string/menu_student"
+        tools:layout="@layout/fragment_fee" />
+
+    <fragment
+        android:id="@+id/nav_tutor"
+        android:name="com.example.tutorready.ui.tutor.TutorFragment"
+        android:label="@string/menu_tutor"
+        tools:layout="@layout/fragment_tutor" />
+
+    <fragment
+        android:id="@+id/nav_listClass"
+        android:name="com.example.tutorready.ui.grade.GradeFragment"
+        android:label="@string/menu_listClass"
+        tools:layout="@layout/fragment_listclass" />
+
+    <fragment
+        android:id="@+id/nav_fee"
+        android:name="com.example.tutorready.ui.fee.FeeFragment"
+        android:label="@string/menu_fee"
+        tools:layout="@layout/fragment_fee" />
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.tutorready.ui.login.Signup"
+        android:label="@string/menu_login"
+        tools:layout="@layout/activity_dangkithongtingiasu" />
+</navigation>

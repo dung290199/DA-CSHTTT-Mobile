@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    android:orientation="vertical">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="20dp"
+                       android:text="Ảnh đại diện"/>
+
+                   <ImageView
+                       android:id="@+id/img_avatar"
+                       android:layout_width="150dp"
+                       android:layout_height="200dp"
+                       android:layout_marginLeft="20dp"
+                       android:layout_marginTop="0dp"
+                       android:background="@drawable/chandung"
+                       android:onClick="uploadImage" />
+               </LinearLayout>
+               <!--        <LinearLayout-->
+               <!--            android:layout_width="wrap_content"-->
+               <!--            android:layout_height="wrap_content"-->
+               <!--            android:orientation="vertical">-->
+               <!--            <TextView-->
+               <!--                android:layout_width="wrap_content"-->
+               <!--                android:layout_height="wrap_content"-->
+               <!--                android:layout_marginLeft="20dp"-->
+               <!--                android:text="Ảnh CCCD/CMND"/>-->
+               <!--            <ImageView-->
+               <!--                android:layout_width="220dp"-->
+               <!--                android:layout_height="180dp"-->
+               <!--                android:id="@+id/img_CMND"-->
+               <!--                android:layout_marginLeft="20dp"-->
+               <!--                android:layout_marginTop="0dp"-->
+               <!--                android:background="@drawable/hinh"-->
+               <!--                android:onClick="uploadImage"/>-->
+               <!--        </LinearLayout>-->
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="150dp"
+                   android:layout_height="wrap_content"
+                   android:text="Họ tên"
+                   android:textColor="#0C0202"
+                   android:textStyle="bold" />
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/edt_fullName"
+                   android:text="Lê Loan"
+                   />
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="150dp"
+                   android:layout_height="wrap_content"
+                   android:text="Số điện thoại"
+                   android:textColor="#0C0202"
+                   android:textStyle="bold" />
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/edt_phone"
+                   android:text="0123456789"
+                   android:layout_weight="1" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_marginLeft="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="150dp"
+                   android:layout_height="wrap_content"
+                   android:text="Email"
+                   android:textColor="#0C0202"
+                   android:textStyle="bold" />
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="loan@gmai.com"
+                   android:id="@+id/edt_email"
+                   android:layout_weight="1" />
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_marginLeft="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="150dp"
+                   android:layout_height="wrap_content"
+                   android:text="Giới tính"
+                   android:textColor="#0C0202"
+                   android:textStyle="bold" />
+
+               <Spinner
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="2dp"
+                   android:id="@+id/Spinner_gender"
+                   android:layout_width="200dp"
+                   android:layout_height="30dp"
+                   android:entries="@array/Spinner_gender"
+                   android:background="@drawable/vienden" />
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="150dp"
+                   android:layout_height="wrap_content"
+                   android:text="Ngày sinh"
+                   android:textColor="#0C0202"
+                   android:textStyle="bold" />
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/edt_birthday"
+                   android:text="01/01/1998"
+                   />
+           </LinearLayout>
+
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="150dp"
+                   android:layout_height="wrap_content"
+                   android:text="Quê quán"
+                   android:textColor="#0C0202"
+                   android:textStyle="bold" />
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/edt_address"
+                   android:text="Quảng Nam"
+                   android:layout_weight="1" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="150dp"
+                   android:layout_height="wrap_content"
+                   android:text="Trường học"
+                   android:textColor="#0C0202"
+                   android:textStyle="bold" />
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/edt_school"
+                   android:text="Bách khoa Đà Nẵng"
+                   android:layout_weight="1" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_marginLeft="5dp"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="150dp"
+                   android:layout_height="wrap_content"
+                   android:text="Ngành học"
+                   android:textColor="#0C0202"
+                   android:textStyle="bold" />
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Công nghệ thông tin"
+                   android:id="@+id/edt_major"
+                   />
+           </LinearLayout>
+
+
+           <Button
+               android:id="@+id/btn_confirm"
+               android:layout_width="wrap_content"
+               android:layout_height="43dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/xacnhan"
+               android:text="Lưu thông tin cá nhân" />
+       </LinearLayout>
+   </ScrollView>
+
+</LinearLayout>

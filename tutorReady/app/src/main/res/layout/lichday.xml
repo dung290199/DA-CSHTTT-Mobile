@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/whiteColor"
+    android:layout_marginTop="2dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<!--        <TextView-->
+<!--            android:background="@color/blueColor"-->
+<!--            android:id="@+id/tv_id"-->
+<!--            android:layout_width="80sp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/hinh"-->
+<!--            android:textColor="@color/blackColor"-->
+<!--            android:textSize="20sp"-->
+<!--            tools:ignore="VectorDrawableCompat" />-->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+                    android:layout_marginBottom="30dp"
+                    android:textColor="#A80909"
+                    android:textSize="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lớp 8187"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Giáo viên"
+            android:textColor="#0C0202"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_fullName"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:text="Lê Loan" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Môn học"
+            android:textColor="#0C0202"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_birthday"
+            android:text="Toán"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Lớp"
+            android:textColor="#0C0202"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_phone"
+            android:text="7"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Lương"
+            android:textColor="#0C0202"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50000 đ/h"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Học sinh"
+            android:textColor="#0C0202"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lê Văn Minh"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Thời gian tạo"
+        android:textColor="#0C0202"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_address"
+        android:text="01/01/2021"
+        android:layout_weight="1" />
+</LinearLayout>
+
+</LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="3dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:orientation="vertical">-->
+<!--            <TextView-->
+<!--                android:layout_marginBottom="30dp"-->
+<!--                android:textColor="#A80909"-->
+<!--                android:textSize="30sp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Lớp 8187"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:textColor="@color/blackColor"-->
+<!--                android:id="@+id/tv_tutor"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Giáo viên: Lê Loan"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_subject"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Môn học: Sinh học"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_grade"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Lớp 12"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                />-->
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/tv_address"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Nghề nghiệp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="2dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                />&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_salary"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:text="120000 đ/buổi"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_student"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Trần Văn Bình"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_request"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Thời gian tạo: 12/01/2021"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                />-->
+
+
+<!--        </LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Chỉnh sửa"
+android:layout_marginRight="30dp"
+                android:background="@drawable/botron3"/>
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="Hủy"
+
+                android:background="@drawable/botron4"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

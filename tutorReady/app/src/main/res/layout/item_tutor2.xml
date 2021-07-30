@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/whiteColor"
+    android:layout_marginTop="2dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="wrap_content"
+    android:textColor="#A80909"
+    android:textStyle="bold"
+    android:textSize="30sp"
+    android:layout_marginBottom="30sp"
+    android:layout_height="wrap_content"
+    android:text="Duyệt đăng kí học"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/chandung"
+            android:onClick="uploadImage" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Họ tên:                     Lê Loan" />
+
+            <TextView
+                android:id="@+id/tv_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Ngày sinh:              01/01/1998" />
+
+            <TextView
+                android:id="@+id/tv_job"
+                android:textColor="@color/blackColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Nghề nghiệp:         Sinh viên" />
+
+            <TextView
+                android:id="@+id/tv_workplace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Nơi làm việc:         Bách khoa Đà Nẵng" />
+
+            <TextView
+                android:id="@+id/tv_major"
+                android:textColor="@color/blackColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Ngành:                  Công nghệ thông tin" />
+
+            <TextView
+                android:id="@+id/tv_graduate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Năm tốt nghiệp:        2022 " />
+
+            <TextView
+                android:id="@+id/tv_classStudy"
+                android:layout_width="match_parent"
+                android:textColor="@color/blackColor"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Nhận dạy:              Lớp 6,7,8,9" />
+
+            <TextView
+                android:id="@+id/tv_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Môn học:               Toán" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:textColor="@color/blackColor"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Khu vực:                   Liên Chểu" />
+
+            <TextView
+                android:id="@+id/tv_salary"
+                android:layout_width="match_parent"
+                android:textColor="@color/blackColor"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Mức lương tối thiểu:50000đ/h" />
+
+            <TextView
+                android:id="@+id/tv_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Thông tin thêm: Buổi chiều hoặc tối" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/hocsinh"
+            android:onClick="uploadImage" />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Họ tên:                     Trần Anh" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Ngày sinh:              01/01/2008" />
+
+            <TextView
+                android:textColor="@color/blackColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Lớp:                             7" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Trường THCS:         Ngô Thì Nhậm" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="2dp"
+                android:text="Học lực :                      khá" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/xacnhan"
+        android:text="Xác nhận"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
