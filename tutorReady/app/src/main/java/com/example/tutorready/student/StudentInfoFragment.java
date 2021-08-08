@@ -11,9 +11,11 @@ import android.view.ViewGroup;
 import com.example.tutorready.R;
 
 
-public class LichHocFragment extends Fragment {
+public class StudentInfoFragment extends Fragment {
 
-    public LichHocFragment() {
+
+
+    public StudentInfoFragment() {
         // Required empty public constructor
     }
 
@@ -23,8 +25,7 @@ public class LichHocFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_lich_hoc,container,false);
-
+        View view = inflater.inflate(R.layout.fragment_student_info,container,false);
         return view;
     }
 }

@@ -6,11 +6,9 @@ import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.tutorready.student.LichHocFragment;
-import com.example.tutorready.tutor.InfoFragment;
+import com.example.tutorready.tutor.TutorInfoFragment;
 import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
 import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
 
@@ -78,7 +76,7 @@ public class ActivityTutor extends AppCompatActivity {
             //then add them to navigation drawer
 
             sNavigationDrawer3.setMenuItemList(menuItems1);
-            fragmentClass1 =  InfoFragment.class;
+            fragmentClass1 =  TutorInfoFragment.class;
             try {
                 fragment1 = (Fragment) fragmentClass1.newInstance();
             } catch (Exception e) {
@@ -98,7 +96,7 @@ public class ActivityTutor extends AppCompatActivity {
 
                     switch (position){
                         case 0:{
-                            fragmentClass1 = InfoFragment.class;
+                            fragmentClass1 = TutorInfoFragment.class;
                             break;
                         }
                         case 1:{

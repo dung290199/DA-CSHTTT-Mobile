@@ -6,4 +6,32 @@
     <string name="dk"><a href="">Đăng kí thuê gia sư</a></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main5">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_info">Thông tin cá nhân</string>
+    <string name="menu_home">Trang chủ</string>
+    <string name="menu_fee">Học phí</string>
+
+    <string name="menu_danhgia">Đánh giá gia sư</string>
+    <string name="menu_lichhoc">Đăng ký khoá học</string>
+    <string name="menu_khoahoc">Lớp học của tôi</string>
+
+    <string name="menu_dangkyday">Mở lớp</string>
+    <string name="menu_lophoc">Lớp học của tôi</string>
+    <string name="menu_lichday">Lịch dạy của tôi</string>
+
+    <string name="menu_thongkehocsinh">Học sinh</string>
+    <string name="menu_thongkegiasu">Gia sư</string>
+    <string name="menu_duyetyeucau">Duyệt yêu cầu</string>
+
+
+    <string name="menu_doimatkhau">Đổi mật khẩu</string>
+    <string name="menu_info_app">Thông tin ứng dụng</string>
+    <string name="menu_logout">Đăng xuất</string>
 </resources>

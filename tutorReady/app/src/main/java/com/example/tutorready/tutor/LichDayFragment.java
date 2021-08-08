@@ -1,23 +1,19 @@
-package com.example.tutorready.guest;
-
+package com.example.tutorready.tutor;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.fragment.app.Fragment;
-
 import com.example.tutorready.R;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class MessagesFragment extends Fragment {
+public class LichDayFragment extends Fragment {
 
 
-    public MessagesFragment() {
+    public LichDayFragment() {
         // Required empty public constructor
     }
 
@@ -26,7 +22,7 @@ public class MessagesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_messages, container, false);
+        View view = inflater.inflate(R.layout.fragment_lich_day,container,false);
+        return view;
     }
-
 }

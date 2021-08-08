@@ -12,12 +12,12 @@ import android.widget.EditText;
 import com.example.tutorready.ActivityTutor;
 import com.example.tutorready.R;
 
-public class InfoFragment extends Fragment {
+public class TutorInfoFragment extends Fragment {
 
     EditText edtUsername;
 
 
-    public InfoFragment() {
+    public TutorInfoFragment() {
         // Required empty public constructor
     }
 
@@ -27,8 +27,10 @@ public class InfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_info,container,false);
+        View view = inflater.inflate(R.layout.fragment_info_tutor,container,false);
 
+
+        /*
         ActivityTutor activity = (ActivityTutor) getActivity();
         //String username = activity.getUser();
 
@@ -37,6 +39,8 @@ public class InfoFragment extends Fragment {
         edtUsername.setText(activity.getUser());
 
 
+
+         */
         return view;
 
     }

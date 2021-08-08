@@ -85,7 +85,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         Toast.makeText(MainActivity2.this, "Thông tin đã nhập " + data_name + data_pass, Toast.LENGTH_SHORT).show();
 
-        final String url = "http://192.168.1.8:5000/api/auth/login";
+        final String url = "https://tutorready.herokuapp.com/api/auth/login";
 
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -154,7 +154,7 @@ public class MainActivity2 extends AppCompatActivity {
                         */
                         if (role.equals("STUDENT")) {
 
-                            Intent intent = new Intent(MainActivity2.this, ActivityStudent.class);
+                            Intent intent = new Intent(MainActivity2.this, MainActivity5.class);
 
 
                             Bundle bundle = new Bundle();
@@ -194,7 +194,7 @@ public class MainActivity2 extends AppCompatActivity {
                             startActivity(intent);
                         }
                         if (role.equals("TUTOR")) {
-                            Intent intent = new Intent(MainActivity2.this, ActivityTutor.class);
+                            Intent intent = new Intent(MainActivity2.this, MainActivity6.class);
                             Bundle bundle = new Bundle();
                             bundle.putString("token_user", token);
                             bundle.putString("id_user", id);
