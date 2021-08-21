@@ -16,28 +16,28 @@
             android:title="@string/menu_fee" />
 
         <item
-            android:id="@+id/nav_matkhau"
-            android:icon="@drawable/ic_baseline_vpn_key_24"
+            android:id="@+id/nav_doimatkhau"
+            android:icon="@drawable/ic_baseline_lock_24"
             android:title="@string/menu_doimatkhau" />
 
         <item
-            android:id="@+id/nav_info_tutor"
+            android:id="@+id/nav_info_student"
             android:icon="@drawable/ic_baseline_person_24"
             android:title="@string/menu_info" />
 
         <item
             android:id="@+id/nav_dangkyhoc"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_baseline_checklist_24"
             android:title="@string/menu_lichhoc" />
 
         <item
             android:id="@+id/nav_lichhoc"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_baseline_class_24"
             android:title="@string/menu_khoahoc" />
 
         <item
             android:id="@+id/nav_danhgiagiasu"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_baseline_favorite_24"
             android:title="@string/menu_danhgia" />
 
         <item

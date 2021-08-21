@@ -1,4 +1,4 @@
-package com.example.tutorready.home;
+package com.example.tutorready.student;
 
 import android.os.Bundle;
 

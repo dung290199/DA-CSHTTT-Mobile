@@ -17,13 +17,9 @@ import com.example.tutorready.admin.AdminFragment;
 import com.example.tutorready.admin.DuyetYeuCauFragment;
 import com.example.tutorready.admin.GiaSuFragment;
 import com.example.tutorready.admin.HocSinhFragment;
-import com.example.tutorready.home.DoiMatKhauFragment;
+import com.example.tutorready.tutor.DoiMatKhauFragment;
 import com.example.tutorready.home.FeeFragment;
-import com.example.tutorready.home.HomeFragment;
-import com.example.tutorready.student.DangkyHocFragment;
-import com.example.tutorready.student.DanhGiaFragment;
-import com.example.tutorready.student.LichHocFragment;
-import com.example.tutorready.student.StudentInfoFragment;
+import com.example.tutorready.student.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
 
 import org.jetbrains.annotations.NotNull;

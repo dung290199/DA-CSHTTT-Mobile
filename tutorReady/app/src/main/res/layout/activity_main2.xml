@@ -9,43 +9,83 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingTop="80dp">
+        android:orientation="vertical" >
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:gravity="center"
+            android:background="#6EC7E4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#0000">
-            <EditText
-                android:textColor="@color/white"
+            android:layout_height="180dp">
+
+            <ImageView
+                android:gravity="center"
+                android:id="@+id/imageView"
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                tools:srcCompat="@drawable/logo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            >
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:startIconDrawable="@drawable/ic_baseline_person_24"
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/edt_username"
-                android:hint="Tên đăng nhập"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <EditText
+                    android:textColor="#3F51B5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_username"
+                    android:hint="Tên đăng nhập"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true">
-            <EditText
-                android:inputType="textPassword"
-                android:textColor="@color/white"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/edt_password"
-                android:hint="Mật khẩu"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <EditText
+                    android:inputType="textPassword"
+                    android:textColor="#3F51B5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_password"
+                    android:hint="Mật khẩu"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đăng nhập"
-            android:id="@+id/btn_login"/>
 
-    </LinearLayout>
+            <CheckBox
+                android:id="@+id/save_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lưu mật khẩu"
+                />
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng nhập"
+                android:id="@+id/btn_login"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

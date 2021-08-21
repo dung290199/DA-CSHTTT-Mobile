@@ -1,4 +1,4 @@
-package com.example.tutorready.home;
+package com.example.tutorready.tutor;
 
 import android.os.Bundle;
 
@@ -11,21 +11,19 @@ import android.view.ViewGroup;
 import com.example.tutorready.R;
 
 
-public class DoiMatKhauFragment extends Fragment {
+public class Home1Fragment extends Fragment {
 
 
-
-    public DoiMatKhauFragment() {
+    public Home1Fragment() {
         // Required empty public constructor
     }
-
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_doi_mat_khau,container,false);
+        View view = inflater.inflate(R.layout.fragment_home1,container,false);
         return view;
     }
 }

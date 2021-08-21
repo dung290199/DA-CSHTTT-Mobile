@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-
     <group android:checkableBehavior="single">
 
         <item
@@ -17,8 +16,8 @@
             android:title="@string/menu_fee" />
 
         <item
-            android:id="@+id/nav_matkhau"
-            android:icon="@drawable/ic_baseline_vpn_key_24"
+            android:id="@+id/nav_doimatkhau"
+            android:icon="@drawable/ic_baseline_lock_24"
             android:title="@string/menu_doimatkhau" />
 
         <item

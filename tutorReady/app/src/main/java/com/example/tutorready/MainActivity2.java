@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -34,10 +36,13 @@ public class MainActivity2 extends AppCompatActivity {
     Button btn_login;
     String data_name, data_pass;
 
+    ImageView img;
+    CheckBox checkBox_save_pass;
+
     public static final String username = "username";
     public static final String password = "password";
 
-    String id, role, token,birthday,address,picture,CV,email,user, phone, fullname;
+    String id, role, token,birthday,address,picture,CV,email,user, phone, fullname,ava;
     Boolean gender;
 
 
@@ -48,9 +53,14 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         initControl();
 
+        img = findViewById(R.id.imageView);
+        img.setImageResource(R.drawable.logo);
+
 
         edt_username = findViewById(R.id.edt_username);
         edt_password = findViewById(R.id.edt_password);
+
+        checkBox_save_pass = findViewById(R.id.save_pass);
 
         btn_login = findViewById(R.id.btn_login);
 
@@ -104,28 +114,33 @@ public class MainActivity2 extends AppCompatActivity {
                     Toast.makeText(MainActivity2.this, "Đăng nhập thành công!!!", Toast.LENGTH_SHORT).show();
                  */
 
-                    try {
-                        JSONObject jsonObject = new JSONObject(response);
-                        token = (String) jsonObject.getString("token");
-                        String users = (String) jsonObject.getString("user");
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
 
-                        JSONObject jsonObject1 = new JSONObject(users);
-                        id = (String) jsonObject1.getString("_id");
-                        role = (String) jsonObject1.getString("role");
+                    token = (String) jsonObject.getString("token");
+                    String users = (String) jsonObject.getString("user");
 
-                        user = (String) jsonObject1.getString("username");
-                        email = (String) jsonObject1.getString("email");
-                        fullname = (String) jsonObject1.getString("fullname");
-                        birthday = (String) jsonObject1.getString("birthday");
-                        phone = (String) jsonObject1.getString("phone");
-                        address = (String) jsonObject1.getString("address");
+                    JSONObject jsonObject1 = new JSONObject(users);
+                    id = (String) jsonObject1.getString("_id");
+                    role = (String) jsonObject1.getString("role");
 
-                        gender = (Boolean) jsonObject1.getBoolean("gender");
+                    user = (String) jsonObject1.getString("username");
+                    email = (String) jsonObject1.getString("email");
+                    fullname = (String) jsonObject1.getString("fullname");
+                    birthday = (String) jsonObject1.getString("birthday");
+                    phone = (String) jsonObject1.getString("phone");
+                    address = (String) jsonObject1.getString("address");
 
-                        // picture = (String) jsonObject1.getString("phone");
-                        // CV = (String) jsonObject1.getString("phone");
+                    gender = (Boolean) jsonObject1.getBoolean("gender");
 
-                        //Toast.makeText(MainActivity2.this, "Đăng !", Toast.LENGTH_SHORT).show();
+                    picture = (String) jsonObject1.getString("picture");
+
+                    if (role.equals("TUTOR"))
+                    {
+                        CV = (String) jsonObject1.getString("CV");
+                    }
+
+                    //Toast.makeText(MainActivity2.this, "Đăng !", Toast.LENGTH_SHORT).show();
 
 
                         /*
@@ -152,15 +167,34 @@ public class MainActivity2 extends AppCompatActivity {
 
 
                         */
-                        if (role.equals("STUDENT")) {
+                    if (role.equals("STUDENT")) {
 
-                            Intent intent = new Intent(MainActivity2.this, MainActivity5.class);
+                        Intent intent = new Intent(MainActivity2.this, MainActivity5.class);
+
+                        Bundle bundle = new Bundle();
+                        bundle.putString("token_user", token);
+                        bundle.putString("id_user", id);
+
+                        bundle.putString("username", user);
+                        bundle.putString("email_user", email);
+                        bundle.putString("fullname", fullname);
+                        bundle.putString("birthday", birthday);
+                        bundle.putString("phone", phone);
+                        bundle.putString("address", address);
+                        bundle.putBoolean("gender", gender);
+
+                        bundle.putString("picture",picture);
+                        Toast.makeText(MainActivity2.this, "Mời bạn nhập đầy đủ thông tin" + picture, Toast.LENGTH_SHORT).show();
+
+                        intent.putExtras(bundle);
+                        startActivity(intent);
 
 
+                            /*
                             Bundle bundle = new Bundle();
+
                             bundle.putString("token_user", token);
                             bundle.putString("id_user", id);
-
                             bundle.putString("username", user);
                             bundle.putString("email_user", email);
                             bundle.putString("fullname", fullname);
@@ -168,59 +202,71 @@ public class MainActivity2 extends AppCompatActivity {
                             bundle.putString("phone", phone);
                             bundle.putString("address", address);
                             bundle.putBoolean("gender", gender);
+                            bundle.putString("picture",ava);
 
-                            //bundle.putString("");
-                            // lấy ảnh về ntn
+
+
+
+                            //bundle.putSerializable("obj_tutor", tutor);
+
+
                             intent.putExtras(bundle);
 
-                            startActivity(intent);
-                        }
-                        if (role.equals("ADMIN")) {
-                            Intent intent = new Intent(MainActivity2.this, ActivityAdmin.class);
 
-                            Bundle bundle = new Bundle();
-                            bundle.putString("token_user", token);
-                            bundle.putString("id_user", id);
+                             */
 
-                            bundle.putString("username", user);
-                            bundle.putString("email_user", email);
-                            bundle.putString("fullname", fullname);
-                            bundle.putString("birthday", birthday);
-                            bundle.putString("phone", phone);
-                            bundle.putString("address", address);
-                            bundle.putBoolean("gender", gender);
-                            intent.putExtras(bundle);
-
-                            startActivity(intent);
-                        }
-                        if (role.equals("TUTOR")) {
-                            Intent intent = new Intent(MainActivity2.this, MainActivity6.class);
-                            Bundle bundle = new Bundle();
-                            bundle.putString("token_user", token);
-                            bundle.putString("id_user", id);
-
-                            bundle.putString("username", user);
-                            bundle.putString("email_user", email);
-                            bundle.putString("fullname", fullname);
-                            bundle.putString("birthday", birthday);
-                            bundle.putString("phone", phone);
-                            bundle.putString("address", address);
-                            bundle.putBoolean("gender", gender);
-
-                            intent.putExtras(bundle);
-                            startActivity(intent);
-                        }
-
-
-
-                        //Toast.makeText(LoginActivity.this, "VÀO", Toast.LENGTH_SHORT).show();
-                        //Toast.makeText(LoginActivity.this, "Đăng nhập thành công!!!" + user, Toast.LENGTH_LONG).show();
-                        //Toast.makeText(LoginActivity.this, "Đăng nhập thành công!!!" + role, Toast.LENGTH_LONG).show();
-
-                    } catch (JSONException e) {
-                        //Toast.makeText(LoginActivity.this, "NOTTTTTTTTT!!", Toast.LENGTH_SHORT).show();
-                        e.printStackTrace();
+                        startActivity(intent);
                     }
+                    if (role.equals("ADMIN")) {
+                        Intent intent = new Intent(MainActivity2.this, MainActivity7.class);
+
+                        Bundle bundle = new Bundle();
+                        bundle.putString("token_user", token);
+                        bundle.putString("id_user", id);
+
+                        bundle.putString("username", user);
+                        bundle.putString("email_user", email);
+                        bundle.putString("fullname", fullname);
+                        bundle.putString("birthday", birthday);
+                        bundle.putString("phone", phone);
+                        bundle.putString("address", address);
+                        bundle.putBoolean("gender", gender);
+                        bundle.putString("picture",ava);
+                        intent.putExtras(bundle);
+
+                        startActivity(intent);
+                    }
+                    if (role.equals("TUTOR")) {
+                        Intent intent = new Intent(MainActivity2.this, MainActivity6.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("token_user", token);
+                        bundle.putString("id_user", id);
+
+                        bundle.putString("username", user);
+                        bundle.putString("email_user", email);
+                        bundle.putString("fullname", fullname);
+                        bundle.putString("birthday", birthday);
+                        bundle.putString("phone", phone);
+                        bundle.putString("address", address);
+                        bundle.putBoolean("gender", gender);
+
+                        bundle.putString("picture",picture);
+                        bundle.putString("CV",CV);
+                        Toast.makeText(MainActivity2.this, "Mời bạn nhập đầy đủ thông tin" + picture, Toast.LENGTH_SHORT).show();
+
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                    }
+
+
+
+                    //Toast.makeText(LoginActivity.this, "Đăng nhập thành công!!!" + user, Toast.LENGTH_LONG).show();
+                    //Toast.makeText(LoginActivity.this, "Đăng nhập thành công!!!" + role, Toast.LENGTH_LONG).show();
+
+                } catch (JSONException e) {
+                    //Toast.makeText(LoginActivity.this, "NOTTTTTTTTT!!", Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
             }
         }, new Response.ErrorListener() {
             @Override

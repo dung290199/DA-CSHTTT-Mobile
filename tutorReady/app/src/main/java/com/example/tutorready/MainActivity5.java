@@ -7,22 +7,22 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.tutorready.home.DoiMatKhauFragment;
+import com.example.tutorready.student.DoiMatKhau2Fragment;
+import com.example.tutorready.tutor.DoiMatKhauFragment;
 import com.example.tutorready.home.FeeFragment;
-import com.example.tutorready.home.HomeFragment;
+import com.example.tutorready.student.HomeFragment;
 import com.example.tutorready.student.DanhGiaFragment;
 import com.example.tutorready.student.LichHocFragment;
 import com.example.tutorready.student.DangkyHocFragment;
 import com.example.tutorready.student.StudentInfoFragment;
 import com.google.android.material.navigation.NavigationView;
-import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -31,12 +31,8 @@ public class MainActivity5 extends AppCompatActivity implements NavigationView.O
   // Student
     private DrawerLayout drawerLayout;
 
-    private static final int FRAGMENT_INFO = 0;
-    private static final int FRAGMENT_LICHHOC = 1;
-    private static final int FRAGMENT_DANG_KY_HOC = 2;
-    private  int CurrentFragment = FRAGMENT_INFO;
-
-
+    String id,token,role,email,fullname,birthday,address,phone,user,picture;
+    Boolean gender;
 
 
     @Override
@@ -59,14 +55,40 @@ public class MainActivity5 extends AppCompatActivity implements NavigationView.O
         replaceFragment(new HomeFragment());
         navigationView.getMenu().findItem(R.id.nav_home).setCheckable(true);
 
+        getData();
 
 
 
-    }       
+
+    }
+
+    private void getData() {
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+
+        id = bundle.getString("id_user");
+        token = bundle.getString("token_user");
+
+        user = bundle.getString("username");
+        email = bundle.getString("email_user");
+        fullname = bundle.getString("fullname");
+        birthday = bundle.getString("birthday");
+        phone = bundle.getString("phone");
+        address = bundle.getString("address");
+
+        role = bundle.getString("role_user");
+        gender = bundle.getBoolean("gender");
+
+        picture = bundle.getString("picture");
+
+    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
 
+        /*
         int id = item.getItemId();
 
         if (id == R.id.nav_info_student) {
@@ -96,6 +118,8 @@ public class MainActivity5 extends AppCompatActivity implements NavigationView.O
         }
 
 
+         */
+
         switch (item.getItemId()){
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_frame_student,new HomeFragment()).commit();
@@ -104,7 +128,7 @@ public class MainActivity5 extends AppCompatActivity implements NavigationView.O
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_frame_student,new FeeFragment()).commit();
                 break;
             case R.id.nav_doimatkhau:
-                getSupportFragmentManager().beginTransaction().replace(R.id.content_frame_student,new DoiMatKhauFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.content_frame_student,new DoiMatKhau2Fragment()).commit();
                 break;
             case R.id.nav_info_student:
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_frame_student,new StudentInfoFragment()).commit();
@@ -148,5 +172,45 @@ public class MainActivity5 extends AppCompatActivity implements NavigationView.O
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.content_frame_student,fragment);
         fragmentTransaction.commit();
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getAva() {
+        return picture;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public Boolean getGender() {
+        return gender;
     }
 }

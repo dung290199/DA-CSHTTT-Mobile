@@ -34,4 +34,48 @@
     <string name="menu_doimatkhau">Đổi mật khẩu</string>
     <string name="menu_info_app">Thông tin ứng dụng</string>
     <string name="menu_logout">Đăng xuất</string>
+
+    <string name="country_prompt">Chọn Tỉnh/Thành Phố</string>
+    <string-array name="Spinner_Subjects">
+        <item>Toán học</item>
+        <item>Vật lí</item>
+        <item>Hóa học</item>
+        <item>Sinh học </item>
+        <item>Tiếng anh</item>
+        <item>Ngữ văn</item>
+        <item>Năng khiếu</item>
+        <item>Các môn khác</item>
+    </string-array>
+    <string-array name="Spinner_numOfSession">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+
+    </string-array>
+    <string-array name="Spinner_Levels">
+        <item>Mầm non</item>
+        <item>Cấp 1</item>
+        <item>Cấp 2</item>
+        <item>Cấp 3</item>
+        <item>Người đi làm</item>
+    </string-array>
+    <string-array name="Spinner_Requests">
+        <item>Sinh viên</item>
+        <item>Giáo viên</item>
+    </string-array>
+    <string-array name="Spinner_Area">
+        <item>Cẩm Lệ</item>
+        <item>Hải Châu</item>
+        <item>Liên Chiểu</item>
+        <item>Ngũ Hành Sơn</item>
+        <item>Sơn Trà</item>
+        <item>Thanh Khê</item>
+        <item>Hoàng Sa</item>
+        <item>Hòa Vang</item>
+
+    </string-array>
 </resources>

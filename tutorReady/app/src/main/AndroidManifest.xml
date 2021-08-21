@@ -15,9 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TutorReady"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity6"></activity>
+        <activity android:name=".MainActivity7"></activity>
+        <activity android:name=".MainActivity6" />
         <activity android:name=".MainActivityAdmin" />
-        <activity android:name=".MainActivityTutor" />
         <activity android:name=".MainActivity5" />
         <activity android:name=".MainActivity3" />
         <activity android:name=".MainActivity3Fix" />
@@ -26,7 +26,6 @@
         <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ActivityStudent" />
-        <activity android:name=".ActivityAdmin" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"Mời bạn đăng ký",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, MainActivity3Fix.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
                 startActivity(intent);
             }
         });
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"Mời bạn đăng ký",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, MainActivity3Fix.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
                 startActivity(intent);
             }
         });
